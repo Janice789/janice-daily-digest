@@ -10,6 +10,7 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.24.0",
     "apify-client": "^2.9.0",
+    "dotenv": "^17.4.2",
     "gh-pages": "^6.1.1",
     "resend": "^3.2.0",
     "rss-parser": "^3.13.0"

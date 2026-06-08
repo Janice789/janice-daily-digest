@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { generateDeepDives } from '../src/analyzer.js';
 
 const MOCK_ARTICLES = [
