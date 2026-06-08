@@ -57,7 +57,7 @@ const SOURCES = {
       { name: 'TechCrunch', url: 'https://techcrunch.com/feed/', type: 'rss', theme: 'Tech & AI' },
       { name: 'The Verge', url: 'https://www.theverge.com/rss/index.xml', type: 'rss', theme: 'Tech & AI' },
       { name: 'TLDR AI', url: 'https://tldr.tech/api/rss/ai', type: 'rss', theme: 'Tech & AI' },
-      { name: 'The Rundown AI', url: 'https://www.therundown.ai/rss', type: 'rss', theme: 'Tech & AI' },
+      { name: 'MIT Tech Review AI', url: 'https://www.technologyreview.com/feed/', type: 'rss', theme: 'Tech & AI' },
     ],
   },
   6: { // Saturday — Competitive Intel
