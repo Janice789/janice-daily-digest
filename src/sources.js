@@ -72,6 +72,10 @@ const SOURCES = {
   },
 };
 
+export function getAllSourcesByTheme() {
+  return Object.values(SOURCES).map(({ theme, label, feeds }) => ({ theme, label, feeds }));
+}
+
 export function getSourcesForDay(dayIndex) {
   const config = SOURCES[dayIndex];
   if (!config) throw new Error(`No sources configured for day index ${dayIndex}`);

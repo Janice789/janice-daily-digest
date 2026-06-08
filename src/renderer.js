@@ -6,6 +6,35 @@ function escapeHtml(str) {
     .replace(/"/g, '&quot;');
 }
 
+function renderQuickScan(quickScan) {
+  if (!quickScan || quickScan.length === 0) return '';
+  const themes = quickScan.map(({ theme, label, articles }) => {
+    if (!articles || articles.length === 0) return '';
+    const items = articles.map(a => `
+      <li class="qs-item">
+        <a href="${escapeHtml(a.url)}" target="_blank" rel="noopener" class="qs-link">
+          ${escapeHtml(a.title)}
+        </a>
+        <span class="qs-source">${escapeHtml(a.source)}</span>
+        ${a.snippet ? `<span class="qs-snippet">${escapeHtml(a.snippet)}…</span>` : ''}
+      </li>`).join('');
+    return `
+      <div class="qs-theme">
+        <div class="qs-theme-label">${escapeHtml(theme)}</div>
+        <ul class="qs-list">${items}</ul>
+      </div>`;
+  }).join('');
+
+  return `
+<section class="quick-scan">
+  <div class="qs-header">
+    <span class="qs-eyebrow">Quick Scan</span>
+    <span class="qs-sub">Top 3 headlines across all themes — click to read</span>
+  </div>
+  <div class="qs-grid">${themes}</div>
+</section>`;
+}
+
 function renderStory(dive) {
   return `
 <article class="story">
@@ -72,10 +101,25 @@ const CSS = `
   .source-link { display: inline-block; margin-top: 16px; font-size: 0.85rem; color: #2979ff; text-decoration: none; font-family: monospace; }
   .source-link:hover { text-decoration: underline; }
   footer { margin-top: 48px; font-size: 0.8rem; color: #aaa; text-align: center; }
+  /* Quick Scan */
+  .quick-scan { background: #f0f7ff; border: 1px solid #d0e4f7; border-radius: 8px; padding: 24px 28px; margin-bottom: 56px; }
+  .qs-header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 20px; border-bottom: 1px solid #d0e4f7; padding-bottom: 12px; }
+  .qs-eyebrow { font-family: monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: bold; color: #2979ff; }
+  .qs-sub { font-size: 0.8rem; color: #888; }
+  .qs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+  .qs-theme { }
+  .qs-theme-label { font-family: monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #999; margin-bottom: 8px; }
+  .qs-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .qs-item { }
+  .qs-link { display: block; font-size: 0.9rem; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; margin-bottom: 2px; }
+  .qs-link:hover { color: #2979ff; text-decoration: underline; }
+  .qs-source { display: inline-block; font-family: monospace; font-size: 10px; color: #aaa; letter-spacing: 0.5px; margin-bottom: 2px; }
+  .qs-snippet { display: block; font-size: 0.78rem; color: #888; line-height: 1.5; }
 `;
 
-export function renderDigestPage({ date, theme, dayLabel, dives }) {
+export function renderDigestPage({ date, theme, dayLabel, dives, quickScan }) {
   const stories = dives.map(renderStory).join('\n');
+  const quickScanHtml = renderQuickScan(quickScan);
   const formatted = new Date(date).toLocaleDateString('en-GB', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
   return `<!DOCTYPE html>
@@ -93,6 +137,7 @@ export function renderDigestPage({ date, theme, dayLabel, dives }) {
       <h1>Janice's Daily Digest</h1>
       <div class="date-line">${escapeHtml(formatted)} · ${dives.length} deep dive${dives.length !== 1 ? 's' : ''}</div>
     </header>
+    ${quickScanHtml}
     ${stories || '<p style="color:#999">No stories today.</p>'}
     <footer>Janice Daily Digest · Auto-generated · <a href="index.html">All digests →</a></footer>
   </div>

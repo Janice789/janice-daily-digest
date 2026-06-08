@@ -1,6 +1,6 @@
 import 'dotenv/config';
-import { getSourcesForDay, getThemeForDay, getLabelForDay } from './sources.js';
-import { fetchArticles } from './scraper.js';
+import { getSourcesForDay, getThemeForDay, getLabelForDay, getAllSourcesByTheme } from './sources.js';
+import { fetchArticles, fetchQuickScan } from './scraper.js';
 import { generateDeepDives } from './analyzer.js';
 import { renderDigestPage, renderIndexPage } from './renderer.js';
 import { buildPublicDir, publishToGithubPages } from './publisher.js';
@@ -23,11 +23,15 @@ async function run() {
 
   console.log(`[run] ${date} · ${dayLabel} · ${theme}`);
 
-  // 1. Scrape
+  // 1. Scrape — deep-dive sources + quick scan across all themes (parallel)
   const sources = getSourcesForDay(dayIndex);
-  console.log(`[run] Fetching ${sources.length} sources...`);
-  const articles = await fetchArticles(sources, { maxPerSource: 6 });
-  console.log(`[run] Got ${articles.length} articles`);
+  const allThemes = getAllSourcesByTheme();
+  console.log(`[run] Fetching deep-dive sources + quick scan...`);
+  const [articles, quickScan] = await Promise.all([
+    fetchArticles(sources, { maxPerSource: 6 }),
+    fetchQuickScan(allThemes),
+  ]);
+  console.log(`[run] Got ${articles.length} articles, ${quickScan.length} themes in quick scan`);
 
   // 2. Analyze
   console.log('[run] Generating deep-dives with Claude...');
@@ -35,7 +39,7 @@ async function run() {
   console.log(`[run] Generated ${dives.length} deep-dives`);
 
   // 3. Render
-  const digestHtml = renderDigestPage({ date, theme, dayLabel, dives });
+  const digestHtml = renderDigestPage({ date, theme, dayLabel, dives, quickScan });
   // Build index entries — read existing from public/ if present
   const indexEntries = [{ date, theme, dayLabel, storyCount: dives.length }];
   const indexHtml = renderIndexPage(indexEntries);

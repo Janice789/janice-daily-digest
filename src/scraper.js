@@ -36,6 +36,25 @@ async function fetchFullText(url) {
   }
 }
 
+// Fetch top 3 headlines per theme across all 7 themes — RSS only, no Apify
+export async function fetchQuickScan(allThemes) {
+  const results = await Promise.all(
+    allThemes.map(async ({ theme, label, feeds }) => {
+      const feedResults = await Promise.all(
+        feeds.map(source => fetchRssSource(source, 3))
+      );
+      const articles = feedResults.flat().slice(0, 3).map(a => ({
+        title: a.title,
+        url: a.url,
+        source: a.source,
+        snippet: a.summary ? a.summary.replace(/<[^>]+>/g, '').slice(0, 120).trim() : '',
+      }));
+      return { theme, label, articles };
+    })
+  );
+  return results;
+}
+
 export async function fetchArticles(sources, { maxPerSource = 5 } = {}) {
   // 1. Fetch RSS from all sources
   const results = await Promise.all(

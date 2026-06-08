@@ -1,6 +1,6 @@
 import 'dotenv/config';
-import { getSourcesForDay, getThemeForDay, getLabelForDay } from './src/sources.js';
-import { fetchArticles } from './src/scraper.js';
+import { getSourcesForDay, getThemeForDay, getLabelForDay, getAllSourcesByTheme } from './src/sources.js';
+import { fetchArticles, fetchQuickScan } from './src/scraper.js';
 import { generateDeepDives } from './src/analyzer.js';
 import { renderDigestPage, renderIndexPage } from './src/renderer.js';
 import { buildPublicDir, publishToGithubPages } from './src/publisher.js';
@@ -18,8 +18,11 @@ async function smokeTest() {
   console.log(`Day: ${dayLabel} · ${theme}`);
 
   const sources = getSourcesForDay(dayIndex);
-  console.log('Fetching articles...');
-  const articles = await fetchArticles(sources, { maxPerSource: 4 });
+  console.log('Fetching articles + quick scan...');
+  const [articles, quickScan] = await Promise.all([
+    fetchArticles(sources, { maxPerSource: 4 }),
+    fetchQuickScan(getAllSourcesByTheme()),
+  ]);
   console.log(`Got ${articles.length} articles`);
   if (articles.length === 0) throw new Error('No articles fetched — check RSS sources');
 
@@ -28,7 +31,8 @@ async function smokeTest() {
   console.log(`Generated ${dives.length} deep-dives`);
   if (dives.length === 0) throw new Error('No deep-dives generated — check Anthropic API key');
 
-  const digestHtml = renderDigestPage({ date, theme, dayLabel, dives });
+  console.log(`Quick scan: ${quickScan.map(t => `${t.theme}(${t.articles.length})`).join(', ')}`);
+  const digestHtml = renderDigestPage({ date, theme, dayLabel, dives, quickScan });
   const indexHtml = renderIndexPage([{ date, theme, dayLabel, storyCount: dives.length }]);
   buildPublicDir({ date, digestHtml, indexHtml });
   console.log('HTML files written to ./public/');
