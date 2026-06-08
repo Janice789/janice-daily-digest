@@ -1,6 +1,8 @@
 import Parser from 'rss-parser';
+import { ApifyClient } from 'apify-client';
 
 const parser = new Parser({ timeout: 10000 });
+const FULL_TEXT_LIMIT = 3; // enrich top N articles with full text
 
 async function fetchRssSource(source, maxPerSource) {
   try {
@@ -11,6 +13,7 @@ async function fetchRssSource(source, maxPerSource) {
       source: source.name,
       summary: item.contentSnippet ?? item.content ?? item.summary ?? '',
       publishedAt: item.pubDate ?? item.isoDate ?? '',
+      fullText: null,
     }));
   } catch (err) {
     console.warn(`[scraper] Failed to fetch ${source.name}: ${err.message}`);
@@ -18,9 +21,36 @@ async function fetchRssSource(source, maxPerSource) {
   }
 }
 
+async function fetchFullText(url) {
+  try {
+    const client = new ApifyClient({ token: process.env.APIFY_API_TOKEN });
+    const run = await client.actor('apify/rag-web-browser').call(
+      { query: url, maxResults: 1, outputFormats: ['markdown'], scrapingTool: 'raw-http' },
+      { memory: 256 },
+    );
+    const { items } = await client.dataset(run.defaultDatasetId).listItems();
+    return items[0]?.markdown ?? items[0]?.text ?? null;
+  } catch (err) {
+    console.warn(`[scraper] Full-text fetch failed for ${url}: ${err.message}`);
+    return null;
+  }
+}
+
 export async function fetchArticles(sources, { maxPerSource = 5 } = {}) {
+  // 1. Fetch RSS from all sources
   const results = await Promise.all(
     sources.map(source => fetchRssSource(source, maxPerSource))
   );
-  return results.flat();
+  const articles = results.flat();
+
+  // 2. Enrich top N articles with full text via Apify (sequential to stay within memory limits)
+  const toEnrich = articles.slice(0, FULL_TEXT_LIMIT);
+  for (const article of toEnrich) {
+    article.fullText = await fetchFullText(article.url);
+  }
+
+  const enriched = toEnrich.filter(Boolean).filter(a => a.fullText).length;
+  console.log(`[scraper] Full text fetched for ${enriched}/${toEnrich.length} articles`);
+
+  return articles;
 }

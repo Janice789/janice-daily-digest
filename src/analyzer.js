@@ -18,7 +18,7 @@ ${articles.map((a, i) => `
 [${i + 1}] ${a.title}
 Source: ${a.source}
 URL: ${a.url}
-Content: ${a.summary}
+Content: ${a.fullText || a.summary}
 `).join('\n---\n')}
 
 Select the best 3-5 articles and return a JSON array. Each object must have exactly these fields:
