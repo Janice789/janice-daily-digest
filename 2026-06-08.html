@@ -26,6 +26,20 @@
   .source-link { display: inline-block; margin-top: 16px; font-size: 0.85rem; color: #2979ff; text-decoration: none; font-family: monospace; }
   .source-link:hover { text-decoration: underline; }
   footer { margin-top: 48px; font-size: 0.8rem; color: #aaa; text-align: center; }
+  /* Quick Scan */
+  .quick-scan { background: #f0f7ff; border: 1px solid #d0e4f7; border-radius: 8px; padding: 24px 28px; margin-bottom: 56px; }
+  .qs-header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 20px; border-bottom: 1px solid #d0e4f7; padding-bottom: 12px; }
+  .qs-eyebrow { font-family: monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: bold; color: #2979ff; }
+  .qs-sub { font-size: 0.8rem; color: #888; }
+  .qs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+  .qs-theme { }
+  .qs-theme-label { font-family: monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #999; margin-bottom: 8px; }
+  .qs-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .qs-item { }
+  .qs-link { display: block; font-size: 0.9rem; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; margin-bottom: 2px; }
+  .qs-link:hover { color: #2979ff; text-decoration: underline; }
+  .qs-source { display: inline-block; font-family: monospace; font-size: 10px; color: #aaa; letter-spacing: 0.5px; margin-bottom: 2px; }
+  .qs-snippet { display: block; font-size: 0.78rem; color: #888; line-height: 1.5; }
 </style>
 </head>
 <body>
@@ -36,42 +50,84 @@
       <div class="date-line">Monday, 8 June 2026 · 4 deep dives</div>
     </header>
     
+    
 <article class="story">
   <header class="story-header">
-    <h2>NotebookLM's new update will help you build source repository from chat</h2>
-    <div class="meta"><span class="source">TechCrunch</span> · <span class="read-time">4 min</span></div>
+    <h2>How to apply to Startup Battlefield 2026, what you need ahead of today's June 8 deadline</h2>
+    <div class="meta"><span class="source">TechCrunch</span> · <span class="read-time">8 min</span></div>
   </header>
 
-  <blockquote class="quick-take">Google just inverted the knowledge work funnel. For two years, NotebookLM required you to bring sources before asking questions — a product designed for people who already know what they're researching. Now it starts with curiosity and builds the repository backward. This isn't just UX polish; it's Google admitting that AI tools must eliminate setup friction to achieve mass adoption. The winners in AI tooling won't be those with the best models, but those who remove every barrier between impulse and insight.</blockquote>
+  <blockquote class="quick-take">The best founders almost don't apply because they think they're too early — this is the selection committee's lens speaking. What looks like 'not ready' to you is exactly what tier-one judges want to see: conviction about a problem before traction validates it. The paradox: programs designed to find breakthrough companies actively select for founders who doubt they belong there. This reveals the real filter — not polish, but the gap between your internal belief and external proof.</blockquote>
 
   <section class="section">
     <h3>What Happened</h3>
-    <p>Google upgraded NotebookLM to use Gemini 3.5 and fundamentally changed how users interact with it. Previously, you had to import sources (PDFs, videos, notes) before querying. Now you can start with questions, and NotebookLM will use Google Search and AI to suggest and fetch sources in multiple languages. It also added export formats (charts, PowerPoint, Excel, CSV) and 'thinking transparency' showing reasoning steps. Available first to Google AI Ultra users and Workspace business customers.</p>
+    <p>Isabelle Johannessen, who reviews thousands of Startup Battlefield applications annually, published insider selection criteria ahead of the June 8 deadline. The program seeks category-defining companies with working MVPs, not polished pitches. Key clarifications: press coverage doesn't disqualify you, pre-launch is acceptable, previous rejections are irrelevant, and Series A is case-by-case. The most critical requirement is showing your product actually working — not mockups or explainer videos.</p>
   </section>
 
   <section class="section">
     <h3>Business Model Breakdown</h3>
-    <p>Freemium SaaS with enterprise upsell. Free tier drives adoption, premium features (like this update) reserved for Google AI Ultra subscribers and Workspace business plans. Revenue comes from subscription tiers, with the real money in enterprise seats where companies pay per-user for advanced AI capabilities. The bet: get users hooked on free research tools, then monetize through team collaboration and advanced features.</p>
+    <p>Startup Battlefield is a platform play generating value through: (1) deal flow curation for VCs who sponsor/attend Disrupt, (2) content generation from founder stories for TechCrunch's media properties, (3) ticket sales to Disrupt where Battlefield is the anchor event, and (4) brand halo effect — past winners like Cloudflare and Discord validate the program's selection quality, attracting better future applicants.</p>
   </section>
 
   <section class="section">
     <h3>What Makes Them Succeed</h3>
-    <p>Distribution moat through Google Search integration and Workspace ecosystem lock-in. NotebookLM can pull sources using Google's index — a capability no competitor can replicate. The 'bring your sources' barrier kept adoption capped; removing it unlocks casual users. Google also leverages existing billing relationships with Workspace customers, making upsell frictionless. The real advantage: they're not selling AI, they're making existing Google products smarter.</p>
+    <p>TechCrunch has accumulated 15+ years of selection data showing what 'promising' looks like before it's obvious. They're explicitly optimizing for false negatives (missing a winner hurts their brand) over false positives (selecting a dud). This changes their filter — they want the 'too early' companies because that's where asymmetric outcomes hide. Their unfair advantage is being the first major platform to say yes.</p>
   </section>
 
   <section class="section">
     <h3>First Principles</h3>
-    <p>Friction is the enemy of adoption, especially for tools requiring behavior change. Most AI products fail because they demand users restructure their workflow before seeing value. NotebookLM originally violated this — asking users to organize sources before experiencing benefits. By letting curiosity come first and building structure afterward, they align with how humans actually think: question first, organize later. The tool now mirrors natural research behavior instead of imposing artificial prerequisites.</p>
+    <p>Breakthrough companies look broken before they look brilliant. The period between 'this is interesting' and 'this has traction' is where the best risk/reward exists — but only if you can evaluate conviction and problem clarity without revenue as a crutch. Selection criteria that optimize for this window will systematically find better companies than those optimizing for safe bets.</p>
   </section>
 
   <section class="section highlight">
     <h3>Why It Matters to You</h3>
-    <p>EasyBuzz faces the exact same adoption problem: SMEs won't restructure their content workflow to try a new video tool. NotebookLM's pivot is a masterclass in removing setup friction. For EasyBuzz, this means: don't require SMEs to prepare scripts, organize footage, or learn video terminology before seeing results. Let them describe what they want in plain language and generate something immediately. The first 60 seconds of user experience determine if they stay or churn. Malaysian SMEs especially need instant gratification because they're time-poor and skeptical of new tools.</p>
+    <p>EasyBuzz is exactly in Startup Battlefield's target zone: working MVP, pre-launch or early revenue, Malaysia-based (geographic diversity they explicitly want), and B2B SaaS solving a clear SME problem. At your stage, this platform offers three things money can't buy: (1) forced clarity on your competitive position (they explicitly call out weak competitor analysis), (2) credibility signal for SEA investors who trust TechCrunch curation, and (3) practice articulating why you personally must build this. The application process itself is strategic work you need to do anyway.</p>
   </section>
 
   <section class="section steal">
     <h3>What to Steal</h3>
-    <p>1) Invert your onboarding: Let users describe their desired video outcome first (&quot;I need a product demo for Facebook&quot;), then have EasyBuzz suggest templates, pull stock footage, generate script options — build the 'sources' for them. Don't make them bring raw materials. 2) Add 'discovery mode' where users start with business goals (&quot;I want to increase foot traffic&quot;) and EasyBuzz reverse-engineers the video type, format, and distribution strategy. 3) Show 'thinking transparency' — when EasyBuzz generates a video, show the reasoning: &quot;I used energetic music because you're targeting Gen Z&quot; or &quot;I kept it under 30 seconds because it's for Instagram Reels.&quot; Transparency builds trust with first-time users who don't understand AI.</p>
+    <p>1. Record a screen capture of EasyBuzz working — even if rough — showing a Malaysian SME creating a video in your platform. Not a demo, actual usage. This is your application's entire value. 2. Map your competitive landscape honestly: list Canva, CapCut, Veed.io, Descript, then explain why you win for Malaysian SMEs specifically (language, local payment rails, SME-specific templates, pricing for MYR budgets). Don't claim 'no competitors.' 3. Write your founding story as: 'I watched [specific Malaysian SME] struggle with [specific video problem], realized [insight about SEA market], and couldn't unsee it.' Make it concrete and personal, not generic.</p>
+  </section>
+
+  <a class="source-link" href="https://techcrunch.com/2026/06/08/how-to-apply-to-startup-battlefield-2026-what-you-need-ahead-of-todays-june-8-deadline/" target="_blank" rel="noopener">Read original →</a>
+</article>
+
+<article class="story">
+  <header class="story-header">
+    <h2>NotebookLM's new update will help you build source repository from chat</h2>
+    <div class="meta"><span class="source">TechCrunch</span> · <span class="read-time">6 min</span></div>
+  </header>
+
+  <blockquote class="quick-take">Google just inverted the knowledge work stack. Instead of 'bring your sources, then query them,' NotebookLM now starts with your question and builds the knowledge base for you using search + AI. This is Berkshire's 'float' concept applied to information: the system does work upfront (finding sources) that compounds value over time (reusable knowledge base). The psychological insight: people don't want better ways to organize what they have — they want the system to construct what they need.</blockquote>
+
+  <section class="section">
+    <h3>What Happened</h3>
+    <p>NotebookLM upgraded to Gemini 3.5 and added Antigravity-powered research capabilities. Key changes: users can now start projects by asking questions before adding sources — the AI suggests and retrieves relevant materials via Google Search. The tool generates outputs in multiple formats (charts, Excel, PowerPoint, markdown) with detailed reasoning traces showing how it arrived at answers. Previously required users to upload all sources first. Rolling out to Google AI Ultra and Workspace business customers.</p>
+  </section>
+
+  <section class="section">
+    <h3>Business Model Breakdown</h3>
+    <p>NotebookLM is a retention + upsell mechanism for Google's AI stack. Free tier builds habit and generates training data, then converts users to Google AI Ultra ($29.99/month) or Workspace AI tiers ($30-35/user/month) when they need advanced research features. The business model is: (1) make AI research indispensable for knowledge workers, (2) lock them into Google's ecosystem via accumulated knowledge bases, (3) upsell adjacent Google services (Drive, Docs, Meet) since their research is already there.</p>
+  </section>
+
+  <section class="section">
+    <h3>What Makes Them Succeed</h3>
+    <p>Google has the unfair advantage of integrated search + AI + storage in one platform. When NotebookLM suggests sources, it's drawing from Google's index. When it exports to Sheets/Docs, there's zero friction. Competitors like Notion or Mem.ai have better note-taking UX, but they can't match Google's ability to: (1) find sources globally, (2) process them at scale via Gemini, and (3) export to the tools businesses already use daily. The moat is infrastructure breadth, not feature depth.</p>
+  </section>
+
+  <section class="section">
+    <h3>First Principles</h3>
+    <p>The unit of knowledge work is shifting from documents to queries. Documents were the atomic unit when storage/retrieval was expensive — you organized information upfront to minimize future search cost. Now that AI can synthesize on-demand, the atomic unit becomes the question itself. Systems that start with the question and work backwards (finding sources, organizing them, generating outputs) will beat systems that make users do upfront organization work. This is why Notion is adding AI and Google is pushing NotebookLM — both racing toward query-first knowledge work.</p>
+  </section>
+
+  <section class="section highlight">
+    <h3>Why It Matters to You</h3>
+    <p>This reveals how AI is changing what 'research tools' mean for your customers. Malaysian SMEs don't want 'better video editing software' — they want 'help me create a video that drives sales.' EasyBuzz should think like NotebookLM: start with the business outcome (generate more leads, showcase products, train staff) and work backwards to content creation. Your competitors (Canva, CapCut) still make users start with a blank canvas. If EasyBuzz can ask 'what's your business goal?' and suggest video templates + content based on that, you're playing a different game. The mental model: your product isn't a tool, it's a consultant that creates tools.</p>
+  </section>
+
+  <section class="section steal">
+    <h3>What to Steal</h3>
+    <p>1. Add a 'Start with your goal' onboarding flow: Ask new users 'What do you want this video to achieve?' (options: showcase product, recruit staff, announce promotion, train team). Then pre-populate templates, scripts, stock footage based on their answer. You're doing the 'source building' for them. 2. Show your reasoning: When EasyBuzz suggests a template, show a simple explanation ('This template works for restaurants because it highlights food close-ups in the first 3 seconds'). Makes users feel smart and trust your suggestions. 3. Export flexibility matters: Malaysian SMEs use WhatsApp, Facebook, TikTok, Instagram differently. One video project should export optimized versions for each platform (vertical for Stories, square for Facebook, horizontal for YouTube). NotebookLM's multi-format export is the right mental model.</p>
   </section>
 
   <a class="source-link" href="https://techcrunch.com/2026/06/08/notebooklms-new-update-will-help-you-build-source-repository-from-chat/" target="_blank" rel="noopener">Read original →</a>
@@ -80,124 +136,83 @@
 <article class="story">
   <header class="story-header">
     <h2>Amazon now lets you design custom merch using AI</h2>
-    <div class="meta"><span class="source">TechCrunch</span> · <span class="read-time">3 min</span></div>
-  </header>
-
-  <blockquote class="quick-take">Amazon just weaponized AI against the creator economy middle layer. Platforms like Redbubble and Bonfire built businesses by reducing design friction for custom merch — but they still required creators to upload designs or use templates. Amazon eliminated even that: type a prompt inside the shopping app, and Alexa generates the design AND manufactures AND ships via Prime. This is vertical integration on steroids. The lesson isn't about AI art — it's about collapsing distribution barriers. Amazon is betting that convenience at point-of-purchase beats quality every time.</blockquote>
-
-  <section class="section">
-    <h3>What Happened</h3>
-    <p>Amazon launched AI-powered custom merchandise design directly in its Shopping app. Users describe what they want to Alexa (&quot;dog portrait on a T-shirt&quot;), the AI generates designs, users can edit them, then order production through Amazon's Merch on Demand service with Prime shipping. Supports T-shirts, hoodies, tumblers, water bottles. U.S. only. The feature is free; customers only pay for the printed product. This competes directly with Redbubble, Bonfire, Spring, Fourthwall, and other print-on-demand platforms.</p>
-  </section>
-
-  <section class="section">
-    <h3>Business Model Breakdown</h3>
-    <p>Retail arbitrage meets print-on-demand. Amazon makes money on the product sale markup (manufacturing cost + margin) and captures transaction fees. The real business model is attention arbitrage: keep users inside the Amazon ecosystem by offering every possible service, preventing them from visiting competitor sites. By bundling AI design with instant fulfillment, Amazon turns one-time purchases into impulse buys. The unit economics work because they already have manufacturing infrastructure (Merch on Demand), logistics (Prime), and zero customer acquisition cost (users are already shopping).</p>
-  </section>
-
-  <section class="section">
-    <h3>What Makes Them Succeed</h3>
-    <p>Embedded distribution and zero-friction impulse buying. Users don't have to leave Amazon, create accounts on third-party platforms, or wait weeks for shipping. The entire flow — ideation, design, purchase, delivery — happens in one ecosystem. Amazon also leverages Prime's psychological ownership effect: customers already feel invested in the Amazon relationship, so adding services feels like getting 'more value' rather than switching costs. Their unfair advantage is simply being where purchase intent already exists. Competitors require users to arrive with intent; Amazon captures spontaneous desire.</p>
-  </section>
-
-  <section class="section">
-    <h3>First Principles</h3>
-    <p>Distribution beats differentiation when the product is commoditized. Custom merch is now commodified — anyone can print on T-shirts. The winner isn't who has better printing or design tools; it's who reduces decision-making friction and captures users at the moment of impulse. Amazon wins because the gap between &quot;I want this&quot; and &quot;I own this&quot; is measured in seconds, not days. This is the Bezos Doctrine: own the customer relationship, then expand into every adjacent category without switching costs.</p>
-  </section>
-
-  <section class="section highlight">
-    <h3>Why It Matters to You</h3>
-    <p>EasyBuzz cannot compete with standalone video tools on features. The strategic lesson from Amazon is: embed where decision-making happens. For Malaysian SMEs, that's not a separate video platform — it's inside their existing workflow (Facebook Business Suite, Shopee Seller Center, WhatsApp Business). If EasyBuzz requires SMEs to 'go somewhere else' to make videos, it will lose to tools that embed at the point of need. The second lesson: impulse matters more than perfection for SMEs. Amazon isn't selling design excellence; it's selling instant gratification. EasyBuzz should prioritize speed-to-first-video over feature depth.</p>
-  </section>
-
-  <section class="section steal">
-    <h3>What to Steal</h3>
-    <p>1) Build 'contextual creation' — let SMEs generate videos without leaving their current platform. This could mean browser extensions for Shopee/Lazada where sellers click 'Generate Video' directly on their product listing page, or WhatsApp bot integration where they send a photo and get back a video. The goal: reduce context-switching. 2) Offer 'one-prompt-to-publish' flow: user describes their need (&quot;I need a Ramadan sale video&quot;), EasyBuzz generates it, and provides one-click publish to FB/IG/TikTok — no downloading, re-uploading, or manual posting. 3) Study Amazon's 'edit suggestions' UX — after generating, show clickable actions like &quot;Make it brighter,&quot; &quot;Add text overlay,&quot; &quot;Change music.&quot; Don't make users learn editing terminology; translate their intent into technical parameters.</p>
-  </section>
-
-  <a class="source-link" href="https://techcrunch.com/2026/06/08/amazon-now-lets-you-design-custom-merch-using-ai/" target="_blank" rel="noopener">Read original →</a>
-</article>
-
-<article class="story">
-  <header class="story-header">
-    <h2>WhatsApp says it caught new spyware attacks linked to NSO Group in violation of court order</h2>
     <div class="meta"><span class="source">TechCrunch</span> · <span class="read-time">5 min</span></div>
   </header>
 
-  <blockquote class="quick-take">Compliance is theater when incentives don't align. NSO Group was court-ordered to stop targeting WhatsApp users after a 2019 mass-hacking campaign. They continued anyway, pivoting to phishing attacks instead of zero-click exploits — technically different, legally identical. This reveals a fundamental truth: regulatory penalties only work if they exceed the profit from non-compliance. NSO's customers (governments) pay millions per Pegasus license. A $4 million fine is a rounding error. The deeper lesson for founders: when building in regulated or adversarial spaces, assume bad actors will find loopholes. Design for resilience, not just compliance.</blockquote>
+  <blockquote class="quick-take">Amazon is weaponizing convenience to eat the creator economy. By embedding AI design directly in its Shopping app and connecting it to print-on-demand fulfillment, they've eliminated every friction point that made platforms like Redbubble defensible. The strategic brilliance: they're not building a 'creator platform' — they're making custom merch just another impulse purchase inside the Everything Store. This is how you kill niche marketplaces: bundle their value into a larger shopping behavior customers already have.</blockquote>
 
   <section class="section">
     <h3>What Happened</h3>
-    <p>WhatsApp detected and disrupted new NSO Group spyware campaigns using phishing links to infect users with Pegasus, violating a 2025 permanent injunction. The injunction stemmed from a 2019 lawsuit where NSO mass-hacked 1,400+ WhatsApp users. A jury initially ordered $167M in damages, later reduced to $4M. WhatsApp is now seeking contempt charges. NSO was acquired by U.S. investors in 2025 and is lobbying to be removed from the U.S. Commerce blocklist. Meanwhile, the U.S. has sanctioned other spyware makers like Intellexa while NSO's status remains unchanged.</p>
+    <p>Amazon launched AI-powered merchandise design via Alexa in its Shopping app, allowing anyone to create custom designs on T-shirts, hoodies, tumblers, and water bottles through text prompts. The feature connects to Amazon's Merch on Demand print-on-demand service, handling production and Prime delivery. Currently US-only. Users tap the Alexa icon, describe their design idea, edit via suggested actions or text input, and can share designs for others to purchase. No design skills required — customers only pay for physical products.</p>
   </section>
 
   <section class="section">
     <h3>Business Model Breakdown</h3>
-    <p>NSO operates as B2G (business-to-government) SaaS for surveillance. Governments pay millions per license for Pegasus, which grants remote access to target smartphones. Revenue model is licensing + support contracts, with per-target fees in some cases. The economics are lucrative because governments have near-unlimited budgets for national security tools, and alternatives (building in-house surveillance tech) are prohibitively expensive. NSO's customer concentration risk is high — losing access to Western markets would be catastrophic, hence the aggressive lobbying to lift U.S. sanctions.</p>
+    <p>This is Amazon's classic marketplace expansion playbook: (1) Merch on Demand is already running as a print-on-demand service — this just adds a customer-facing AI design frontend, (2) Amazon takes a cut of every product sold (likely 20-30% margin on print-on-demand), (3) drives Shopping app engagement and Prime subscriptions (free shipping incentive), and (4) generates training data on what designs/prompts convert to purchases. The genius: zero inventory risk, pure margin on facilitation, and each transaction reinforces Prime's value proposition.</p>
   </section>
 
   <section class="section">
     <h3>What Makes Them Succeed</h3>
-    <p>Monopoly on zero-click smartphone exploits and government relationships. NSO discovered and weaponized vulnerabilities in iOS/Android that even Apple/Google couldn't patch immediately. Their technical moat was temporary (vulnerabilities get fixed), but their customer relationships are sticky — governments can't easily switch surveillance vendors mid-operation. NSO also benefits from opacity: their customers (authoritarian regimes, intelligence agencies) don't publicly disclose tool usage, making impact hard to measure or regulate. The company's survival despite scandals proves regulatory arbitrage works when you serve powerful clients.</p>
+    <p>Amazon wins by owning the entire stack: AI design tool + production network + fulfillment infrastructure + 200M+ Prime members + Shopping app distribution. Redbubble or Bonfire might have better creator communities, but they can't compete with Amazon's 'I just thought of this, now it's at my door tomorrow' seamlessness. The moat is vertical integration at scale — competitors need to partner with multiple services for what Amazon does in-house. Plus, Amazon can use purchase data to surface trending designs and optimize pricing in ways standalone platforms can't.</p>
   </section>
 
   <section class="section">
     <h3>First Principles</h3>
-    <p>Security is an arms race, not a solved problem. Every defense creates an incentive to develop better attacks. WhatsApp added encryption, so NSO found zero-click exploits. WhatsApp patched those, so NSO pivoted to phishing. The cycle is infinite because the economic incentive (governments paying millions) exceeds the cost of R&amp;D. For any company operating in adversarial environments, the question isn't 'how do we stop attacks?' but 'how do we make attacks uneconomical or detectable fast enough to minimize damage?' Perfect security doesn't exist; rapid detection and response do.</p>
+    <p>The defensibility of niche marketplaces depends on friction in adjacent markets. Redbubble existed because designing custom merch was hard and Amazon didn't offer it. But as soon as AI removes the design friction and Amazon integrates it into their existing shopping flow, the niche marketplace's moat evaporates. This is a universal pattern: when the core difficulty (design skill, time, risk) disappears via technology, distribution advantage beats curation advantage. The companies that survive are those where community/curation is the product (Etsy), not just the wrapper around fulfillment.</p>
   </section>
 
   <section class="section highlight">
     <h3>Why It Matters to You</h3>
-    <p>EasyBuzz will handle sensitive business content for Malaysian SMEs — product launches, financial promos, internal comms. If EasyBuzz gets hacked or data leaks, SMEs will blame you, not the attacker. The NSO case shows that legal remedies are slow, expensive, and often ineffective (court ordered NSO to stop; they didn't). You must design EasyBuzz assuming bad actors will target it: phishing attacks on your team, social engineering to access customer data, competitors trying to steal your AI models. Build security into product design from day one — end-to-end encryption for video uploads, 2FA mandatory, SOC 2 compliance even before enterprise customers demand it. In SEA, trust is fragile and rumors spread fast. One security incident could kill your reputation before you have a chance to respond.</p>
+    <p>This is your future competitive threat. Today, EasyBuzz's moat is 'making video content easy for Malaysian SMEs who don't have design skills.' But watch what happens when Canva or CapCut integrate AI that asks 'What do you want to promote?' and generates video from a text prompt. Suddenly your 'easy interface' advantage collapses. Amazon's move shows how fast AI can commoditize what seemed defensible 12 months ago. Your sustainable moat isn't 'easy video creation' — it's understanding Malaysian SME business needs better than global platforms do. Local templates, local payment rails, local customer service, local success stories.</p>
   </section>
 
   <section class="section steal">
     <h3>What to Steal</h3>
-    <p>1) Implement 'paranoid defaults' — assume every user account could be compromised. Require 2FA for all users (not optional), auto-logout after inactivity, and email alerts for unusual activity (&quot;Someone logged in from a new device in Vietnam&quot;). Make security invisible but mandatory. 2) Build a 'trust dashboard' for SMEs showing security posture: &quot;Your videos are encrypted, we don't train AI on your content, here's our SOC 2 cert.&quot; Malaysian SMEs won't ask for this proactively, but it builds subconscious trust. 3) Create an incident response playbook now, before you need it. If EasyBuzz gets hacked, you need pre-written templates for: notifying customers, pausing service, engaging lawyers, coordinating with press. WhatsApp's fast response (detecting attacks, filing contempt charges) minimized reputational damage. Delayed response would have destroyed trust.</p>
+    <p>1. Build your 'AI design frontend' now: Add a feature where users describe their video goal in plain text ('I need a 30-second Instagram video showcasing my new laksa dish') and EasyBuzz generates it. Don't wait for perfect — ship something that works 60% of the time and improves weekly. Amazon shipped this knowing some designs will be terrible; they're optimizing for speed to market. 2. Think in 'stacks': Design tool + template library + stock footage + export optimization + tutorial content. Amazon wins by controlling the stack. What parts of the video creation stack can you own vs. rent? If you're just reselling Pexels footage and Canva templates, you're vulnerable. Build proprietary SME-specific templates (F&amp;B promos, retail sale announcements, property listings) that global platforms won't prioritize. 3. Distribution beats curation at scale: Amazon didn't build the best design tool — they built the most convenient one inside an app 100M+ people already use daily. For EasyBuzz, this means integration &gt;&gt; features. Partner with Malaysian e-commerce platforms (Shopee, Lazada), accounting software (SQL, Xero), or POS systems to embed video creation where SMEs already work.</p>
   </section>
 
-  <a class="source-link" href="https://techcrunch.com/2026/06/08/whatsapp-says-it-caught-new-spyware-attacks-linked-to-nso-group-in-violation-of-court-order/" target="_blank" rel="noopener">Read original →</a>
+  <a class="source-link" href="https://techcrunch.com/2026/06/08/amazon-now-lets-you-design-custom-merch-using-ai/" target="_blank" rel="noopener">Read original →</a>
 </article>
 
 <article class="story">
   <header class="story-header">
-    <h2>Amazon now lets you design custom merch using AI</h2>
-    <div class="meta"><span class="source">TechCrunch</span> · <span class="read-time">3 min</span></div>
+    <h2>Are AI chatbots making us lose control of our brains?</h2>
+    <div class="meta"><span class="source">MIT Tech Review</span> · <span class="read-time">7 min</span></div>
   </header>
 
-  <blockquote class="quick-take">Amazon just collapsed the creator economy stack into a single interaction. Every layer of the traditional custom merchandise business—design software, marketplace listing, payment processing, manufacturing, fulfillment—now happens invisibly inside a chat prompt. This is the 'super app' strategy applied to physical goods: own every step of the value chain so completely that users never realize they're using multiple services. The psychological insight: people don't want to 'make custom merch,' they want the merch. Amazon eliminated every step that wasn't directly part of desire fulfillment. For SaaS founders, this is the blueprint: identify which steps in your user's workflow are friction disguised as features.</blockquote>
+  <blockquote class="quick-take">Gloria Mark has spent 30 years studying how digital tools reshape human cognition — and AI chatbots are different. Previous technologies (email, social media, smartphones) fragmented our attention; AI actively replaces our thinking process. The danger isn't distraction, it's delegation: when chatbots generate our drafts, summarize our reading, plan our days, we're outsourcing the cognitive work that builds mental models. This is the Berkshire Hathaway problem in reverse — instead of compounding knowledge, we're compounding dependency. The implication: whoever controls the AI layer controls what people think is possible.</blockquote>
 
   <section class="section">
     <h3>What Happened</h3>
-    <p>Amazon integrated AI design generation directly into its Shopping app via Alexa. Users describe what they want (&quot;T-shirt with my dog's portrait&quot;), AI generates options, users can edit, then purchase for production through Amazon's existing Merch on Demand service with Prime delivery. Supports apparel (T-shirts, hoodies, polos, tank tops) and drinkware (tumblers, water bottles). U.S.-only launch. Free to use; customers pay only for manufactured products. This directly competes with Redbubble, Bonfire, Spring, Fourthwall, and similar print-on-demand platforms by eliminating the need to visit separate design/marketplace sites.</p>
+    <p>Gloria Mark, UC Irvine psychologist and 30-year researcher of human-technology interaction, discussed at SXSW London how AI chatbots differ from previous digital technologies. While email and social media fragmented attention through interruptions, AI chatbots are changing cognition more fundamentally by replacing thinking processes. Instead of being distracted from tasks, users are delegating tasks entirely — drafting, summarizing, planning — which means they're not developing the mental models that come from doing the work themselves. Mark suggests this creates a dependency loop where users increasingly rely on AI for cognitive tasks they previously performed.</p>
   </section>
 
   <section class="section">
     <h3>Business Model Breakdown</h3>
-    <p>Vertical integration with negative customer acquisition cost. Amazon makes margin on the physical product (manufacturing cost + markup) and captures the entire transaction inside its ecosystem. The business model innovation isn't the AI or the printing—it's that Amazon already has 200M+ Prime members who trust one-click purchasing. There's zero CAC because users are already shopping; AI merchandise becomes an impulse add-on rather than a destination purchase. Competitors spend heavily on ads to drive traffic; Amazon monetizes existing traffic by expanding the catalog infinitely through AI generation. The real revenue isn't per-shirt margin—it's lifetime value increase by making Amazon the default for even more purchase categories.</p>
+    <p>This isn't a company story, but the economic logic is critical: AI companies (OpenAI, Anthropic, Google) monetize by making themselves indispensable to knowledge work. The business model is: (1) free tier builds dependency ('ChatGPT writes my emails now'), (2) paid tier ($20-30/month) locks in users who can't go back to doing it manually, (3) enterprise tier ($30-60/user/month) captures organizations once individual dependency becomes institutional. The unit economics work because marginal cost per query is low (~$0.01-0.10) while switching costs are high (users lose their accumulated prompts, chat history, mental model of how to work with the AI).</p>
   </section>
 
   <section class="section">
     <h3>What Makes Them Succeed</h3>
-    <p>Embedded optionality at the moment of intent. Amazon doesn't need to convince users to 'try custom merch'—it surfaces the option contextually when users are already in buying mode. The UX is designed for impulse: see it, want it, own it tomorrow via Prime. Competitors require users to pre-commit to the category (&quot;I'm going to Redbubble to design something&quot;), which filters out casual demand. Amazon's advantage is they capture latent demand that would never convert into a destination visit. Second advantage: infrastructure leverage. Merch on Demand already existed; adding AI design is marginal cost. Competitors built entire businesses around this one use case; Amazon bolted it onto existing fulfillment at near-zero incremental investment.</p>
+    <p>AI chatbots succeed because they exploit the same cognitive vulnerability that makes all addictive technologies work: they provide immediate relief from effortful thinking. Drafting an email is hard; asking ChatGPT to draft it is instant. The neurological reward is powerful. Unlike social media (which exploits novelty-seeking) or smartphones (which exploit FOMO), AI chatbots exploit our desire to avoid cognitive load. The moat is habit formation — once users experience the relief of not thinking, going back to manual cognitive work feels unnecessarily painful.</p>
   </section>
 
   <section class="section">
     <h3>First Principles</h3>
-    <p>Convenience compounds faster than quality for commodity products. Once a product category becomes 'good enough' (custom T-shirts all look similar regardless of platform), distribution advantage becomes insurmountable. Users choose based on convenience, not craftsmanship. This is why Amazon beats specialized retailers despite often having worse selection or quality—the friction cost of going elsewhere exceeds the quality benefit. For any SaaS product, the question is: are you competing on differentiation (features, quality) or distribution (being where users already are)? If the former, you're in a losing race against commoditization. If the latter, you need to embed where decisions happen.</p>
+    <p>Cognitive capacity is built through effortful practice. When you write, you build mental models. When you summarize, you build understanding. When you plan, you build judgment. Outsourcing these activities to AI doesn't just save time — it prevents the cognitive development that makes you better at these tasks. This is fundamentally different from previous automation (calculators, spell-check, GPS) because those tools handled narrow, rule-based tasks. AI handles open-ended, creative, judgment-based tasks — precisely the ones that build cognitive capacity. The long-term consequence: a generation of knowledge workers who are functionally dependent on AI for thinking, not just for execution.</p>
   </section>
 
   <section class="section highlight">
     <h3>Why It Matters to You</h3>
-    <p>EasyBuzz is competing in a market where video creation is rapidly commoditizing. CapCut, Canva, and soon every social platform will have built-in AI video tools. If EasyBuzz positions as a standalone destination (&quot;come to our platform to make videos&quot;), it will lose the same way Redbubble is losing to Amazon. The winning move: embed EasyBuzz where Malaysian SMEs already work—inside Shopee Seller Center, Lazada dashboard, Facebook Business Suite, Instagram Direct. Don't ask SMEs to 'go make a video'; let them generate videos contextually when they're already managing their business. Example: when an SME uploads a new product photo to Shopee, show an inline button: 'Generate video ad from this photo.' One click, video appears, one more click to post. That's the Amazon playbook applied to video SaaS.</p>
+    <p>Your customers (Malaysian SMEs) are about to face this dependency problem with video content. If EasyBuzz becomes 'AI generates your video from a text prompt,' you create dependent customers, not capable ones. They won't learn what makes good video content — they'll just know 'EasyBuzz does it for me.' This is short-term revenue (they need you) but long-term fragility (they can't evaluate quality, adapt to trends, or switch to competitors offering better AI). The strategic choice: Do you want customers who depend on you (SaaS lock-in) or customers who get better at video because of you (customer success model)? The right answer depends on your values and your market — but understand the trade-off.</p>
   </section>
 
   <section class="section steal">
     <h3>What to Steal</h3>
-    <p>1) 'Ambient generation': Let SMEs create videos without explicitly deciding to 'make a video.' Build plugins/integrations where EasyBuzz suggests videos in context—when they're writing a Facebook post, uploading product photos, or checking analytics. Make video creation a byproduct of existing workflows, not a separate destination. 2) One-prompt-to-publish: Copy Amazon's flow—input (text prompt) → generation → light editing (color/music swap) → publish—all in under 60 seconds. Malaysian SMEs won't spend 20 minutes perfecting a video; they need 'good enough in 60 seconds.' Speed beats perfection for commodity content. 3) Leverage existing infrastructure: Amazon didn't build new factories; they used existing Merch on Demand. What existing infrastructure can EasyBuzz leverage? Partner with FB/IG APIs for direct publishing, use SMEs' existing Google Drive for asset storage, integrate with Canva for users who want to tweak designs. Don't rebuild what already exists—integrate and orchestrate.</p>
+    <p>1. Design for 'cognitive scaffolding,' not cognitive replacement: Instead of 'AI creates your video,' try 'AI suggests 3 video structures based on your goal — pick one and customize it.' User still makes creative choices, building judgment about what works. This is how Figma beats Canva for designers — it scaffolds creativity rather than replacing it. 2. Show the reasoning, don't hide it: When EasyBuzz's AI suggests a template or edit, show a 1-sentence explanation ('Videos under 15 seconds get 3x more views on Instagram'). This teaches users the 'why' so they get smarter over time. NotebookLM does this with its 'thinking' traces. 3. Create an 'expert mode' that turns off AI suggestions: Let advanced users work manually. This serves two purposes: (a) prevents your power users from feeling infantilized, and (b) signals to newer users that there's mastery to aspire to. Peloton does this well — you can ignore the instructor and do your own workout, which paradoxically makes people trust the instructor more.</p>
   </section>
 
-  <a class="source-link" href="https://techcrunch.com/2026/06/08/amazon-now-lets-you-design-custom-merch-using-ai/" target="_blank" rel="noopener">Read original →</a>
+  <a class="source-link" href="https://www.technologyreview.com/2026/06/05/1138427/are-ai-chatbots-making-us-lose-control-of-our-brains/" target="_blank" rel="noopener">Read original →</a>
 </article>
     <footer>Janice Daily Digest · Auto-generated · <a href="index.html">All digests →</a></footer>
   </div>
