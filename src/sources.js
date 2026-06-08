@@ -14,8 +14,8 @@ const SOURCES = {
     theme: 'Founder Lens',
     label: 'Mon',
     feeds: [
-      { name: 'First Round Review', url: 'https://review.firstround.com/feed.xml', type: 'rss', theme: 'Founder Lens' },
-      { name: 'a16z', url: 'https://a16z.com/feed/', type: 'rss', theme: 'Founder Lens' },
+      { name: 'YC Blog', url: 'https://www.ycombinator.com/blog/rss.xml', type: 'rss', theme: 'Founder Lens' },
+      { name: 'a16z Future', url: 'https://future.com/feed/', type: 'rss', theme: 'Founder Lens' },
       { name: 'Acquired FM', url: 'https://www.acquired.fm/episodes?format=rss', type: 'rss', theme: 'Founder Lens' },
       { name: 'Lenny Newsletter', url: 'https://www.lennysnewsletter.com/feed', type: 'rss', theme: 'Founder Lens' },
     ],
@@ -27,7 +27,7 @@ const SOURCES = {
       { name: 'Financial Times', url: 'https://www.ft.com/?format=rss', type: 'rss', theme: 'Primary Sources' },
       { name: 'Wall Street Journal', url: 'https://feeds.a.dj.com/rss/RSSMarketsMain.xml', type: 'rss', theme: 'Primary Sources' },
       { name: 'Bloomberg Technology', url: 'https://feeds.bloomberg.com/technology/news.rss', type: 'rss', theme: 'Primary Sources' },
-      { name: 'Harvard Business Review', url: 'https://feeds.hbr.org/harvardbusiness/', type: 'rss', theme: 'Primary Sources' },
+      { name: 'Marker Medium', url: 'https://marker.medium.com/feed', type: 'rss', theme: 'Primary Sources' },
     ],
   },
   3: { // Wednesday — Builder Biographies
@@ -36,8 +36,8 @@ const SOURCES = {
     feeds: [
       { name: 'Invest Like the Best', url: 'https://investlikethebest.libsyn.com/rss', type: 'rss', theme: 'Builder Biographies' },
       { name: 'Lenny Newsletter', url: 'https://www.lennysnewsletter.com/feed', type: 'rss', theme: 'Builder Biographies' },
-      { name: 'a16z', url: 'https://a16z.com/feed/', type: 'rss', theme: 'Builder Biographies' },
-      { name: 'First Round Review', url: 'https://review.firstround.com/feed.xml', type: 'rss', theme: 'Builder Biographies' },
+      { name: 'Andreessen Substack', url: 'https://pmarca.substack.com/feed', type: 'rss', theme: 'Builder Biographies' },
+      { name: 'SaaStr', url: 'https://www.saastr.com/feed/', type: 'rss', theme: 'Builder Biographies' },
     ],
   },
   4: { // Thursday — Culture & Design

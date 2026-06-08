@@ -12,11 +12,13 @@ function renderQuickScan(quickScan) {
     if (!articles || articles.length === 0) return '';
     const items = articles.map(a => `
       <li class="qs-item">
-        <a href="${escapeHtml(a.url)}" target="_blank" rel="noopener" class="qs-link">
-          ${escapeHtml(a.title)}
-        </a>
-        <span class="qs-source">${escapeHtml(a.source)}</span>
-        ${a.snippet ? `<span class="qs-snippet">${escapeHtml(a.snippet)}…</span>` : ''}
+        <div class="qs-item-body">
+          <a href="${escapeHtml(a.url)}" target="_blank" rel="noopener" class="qs-link">${escapeHtml(a.title)}</a>
+          <div class="qs-meta">
+            <span class="qs-source">${escapeHtml(a.source)}</span>
+            ${a.snippet ? `<span class="qs-snippet">— ${escapeHtml(a.snippet)}…</span>` : ''}
+          </div>
+        </div>
       </li>`).join('');
     return `
       <div class="qs-theme">
@@ -31,7 +33,7 @@ function renderQuickScan(quickScan) {
     <span class="qs-eyebrow">Quick Scan</span>
     <span class="qs-sub">Top 3 headlines across all themes — click to read</span>
   </div>
-  <div class="qs-grid">${themes}</div>
+  <div class="qs-themes">${themes}</div>
 </section>`;
 }
 
@@ -102,19 +104,22 @@ const CSS = `
   .source-link:hover { text-decoration: underline; }
   footer { margin-top: 48px; font-size: 0.8rem; color: #aaa; text-align: center; }
   /* Quick Scan */
-  .quick-scan { background: #f0f7ff; border: 1px solid #d0e4f7; border-radius: 8px; padding: 24px 28px; margin-bottom: 56px; }
-  .qs-header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 20px; border-bottom: 1px solid #d0e4f7; padding-bottom: 12px; }
-  .qs-eyebrow { font-family: monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: bold; color: #2979ff; }
-  .qs-sub { font-size: 0.8rem; color: #888; }
-  .qs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-  .qs-theme { }
-  .qs-theme-label { font-family: monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #999; margin-bottom: 8px; }
-  .qs-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
-  .qs-item { }
-  .qs-link { display: block; font-size: 0.9rem; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; margin-bottom: 2px; }
+  .quick-scan { margin-bottom: 56px; }
+  .qs-header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid #1a1a1a; }
+  .qs-eyebrow { font-family: monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: bold; color: #1a1a1a; }
+  .qs-sub { font-size: 0.8rem; color: #999; }
+  .qs-theme { padding: 18px 0; border-bottom: 1px solid #e8e8e0; }
+  .qs-theme:last-child { border-bottom: none; }
+  .qs-theme-label { font-family: monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #2979ff; font-weight: bold; margin-bottom: 12px; }
+  .qs-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+  .qs-item { display: flex; gap: 12px; align-items: baseline; }
+  .qs-item::before { content: "→"; font-family: monospace; font-size: 0.8rem; color: #ccc; flex-shrink: 0; }
+  .qs-item-body { flex: 1; }
+  .qs-link { font-size: 0.92rem; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; }
   .qs-link:hover { color: #2979ff; text-decoration: underline; }
-  .qs-source { display: inline-block; font-family: monospace; font-size: 10px; color: #aaa; letter-spacing: 0.5px; margin-bottom: 2px; }
-  .qs-snippet { display: block; font-size: 0.78rem; color: #888; line-height: 1.5; }
+  .qs-meta { display: flex; gap: 8px; align-items: center; margin-top: 2px; }
+  .qs-source { font-family: monospace; font-size: 10px; color: #bbb; letter-spacing: 0.5px; }
+  .qs-snippet { font-size: 0.78rem; color: #999; line-height: 1.4; }
 `;
 
 export function renderDigestPage({ date, theme, dayLabel, dives, quickScan }) {
