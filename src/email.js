@@ -24,12 +24,19 @@ export function buildEmailHtml({ date, theme, dayLabel, digestUrl, dives }) {
     <p style="margin-bottom:16px;font-size:0.95rem;">Today's deep dives:</p>
     <ul style="list-style:none;padding:0;margin:0 0 28px;">${teasers || '<li style="color:#aaa">No stories today.</li>'}</ul>
 
-    <a href="${digestUrl ?? '#'}"
-       style="display:inline-block;background:#1a1a1a;color:#fff;padding:12px 24px;border-radius:4px;text-decoration:none;font-family:monospace;font-size:13px;letter-spacing:1px;">
-      READ TODAY'S DIGEST →
-    </a>
+    <div style="margin-bottom:16px;">
+      <a href="${digestUrl ?? '#'}"
+         style="display:inline-block;background:#1a1a1a;color:#fff;padding:14px 28px;border-radius:4px;text-decoration:none;font-family:monospace;font-size:14px;letter-spacing:1px;font-weight:bold;">
+        📖 READ TODAY'S DIGEST →
+      </a>
+    </div>
 
-    <p style="margin-top:32px;font-size:0.75rem;color:#ccc;">Janice Daily Digest · Delivered 6am GMT+8</p>
+    <p style="font-size:0.8rem;color:#888;margin:0 0 4px;">Or copy this link:</p>
+    <p style="font-size:0.8rem;margin:0 0 32px;">
+      <a href="${digestUrl ?? '#'}" style="color:#2979ff;word-break:break-all;">${digestUrl ?? ''}</a>
+    </p>
+
+    <p style="font-size:0.75rem;color:#ccc;">Janice Daily Digest · Delivered 6am GMT+8</p>
   </div>
 </body>
 </html>`;
