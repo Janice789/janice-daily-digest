@@ -27,19 +27,22 @@
   .source-link:hover { text-decoration: underline; }
   footer { margin-top: 48px; font-size: 0.8rem; color: #aaa; text-align: center; }
   /* Quick Scan */
-  .quick-scan { background: #f0f7ff; border: 1px solid #d0e4f7; border-radius: 8px; padding: 24px 28px; margin-bottom: 56px; }
-  .qs-header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 20px; border-bottom: 1px solid #d0e4f7; padding-bottom: 12px; }
-  .qs-eyebrow { font-family: monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: bold; color: #2979ff; }
-  .qs-sub { font-size: 0.8rem; color: #888; }
-  .qs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-  .qs-theme { }
-  .qs-theme-label { font-family: monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #999; margin-bottom: 8px; }
-  .qs-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
-  .qs-item { }
-  .qs-link { display: block; font-size: 0.9rem; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; margin-bottom: 2px; }
+  .quick-scan { margin-bottom: 56px; }
+  .qs-header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid #1a1a1a; }
+  .qs-eyebrow { font-family: monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: bold; color: #1a1a1a; }
+  .qs-sub { font-size: 0.8rem; color: #999; }
+  .qs-theme { padding: 18px 0; border-bottom: 1px solid #e8e8e0; }
+  .qs-theme:last-child { border-bottom: none; }
+  .qs-theme-label { font-family: monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #2979ff; font-weight: bold; margin-bottom: 12px; }
+  .qs-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+  .qs-item { display: flex; gap: 12px; align-items: baseline; }
+  .qs-item::before { content: "→"; font-family: monospace; font-size: 0.8rem; color: #ccc; flex-shrink: 0; }
+  .qs-item-body { flex: 1; }
+  .qs-link { font-size: 0.92rem; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; }
   .qs-link:hover { color: #2979ff; text-decoration: underline; }
-  .qs-source { display: inline-block; font-family: monospace; font-size: 10px; color: #aaa; letter-spacing: 0.5px; margin-bottom: 2px; }
-  .qs-snippet { display: block; font-size: 0.78rem; color: #888; line-height: 1.5; }
+  .qs-meta { display: flex; gap: 8px; align-items: center; margin-top: 2px; }
+  .qs-source { font-family: monospace; font-size: 10px; color: #bbb; letter-spacing: 0.5px; }
+  .qs-snippet { font-size: 0.78rem; color: #999; line-height: 1.4; }
 </style>
 </head>
 <body>
@@ -55,184 +58,226 @@
     <span class="qs-eyebrow">Quick Scan</span>
     <span class="qs-sub">Top 3 headlines across all themes — click to read</span>
   </div>
-  <div class="qs-grid">
+  <div class="qs-themes">
       <div class="qs-theme">
         <div class="qs-theme-label">Mental Models</div>
         <ul class="qs-list">
       <li class="qs-item">
-        <a href="https://fs.blog/knowledge-project-podcast/bill-gurley/" target="_blank" rel="noopener" class="qs-link">
-          Mental Models That Change How You Think | Bill Gurley
-        </a>
-        <span class="qs-source">Farnam Street</span>
-        <span class="qs-snippet">Bill Gurley spent years on Wall Street, built his career as a partner at Benchmark, worked through Uber’s hypergrowth er…</span>
+        <div class="qs-item-body">
+          <a href="https://fs.blog/knowledge-project-podcast/bill-gurley/" target="_blank" rel="noopener" class="qs-link">Mental Models That Change How You Think | Bill Gurley</a>
+          <div class="qs-meta">
+            <span class="qs-source">Farnam Street</span>
+            <span class="qs-snippet">— Bill Gurley spent years on Wall Street, built his career as a partner at Benchmark, worked through Uber’s hypergrowth er…</span>
+          </div>
+        </div>
       </li>
       <li class="qs-item">
-        <a href="https://fs.blog/knowledge-project-podcast/mark-pincus/" target="_blank" rel="noopener" class="qs-link">
-          Proven, Better, New: Mark Pincus on the Rules of Innovation
-        </a>
-        <span class="qs-source">Farnam Street</span>
-        <span class="qs-snippet">Mark Pincus is the creator behind Farmville and Words with Friends. He built Zynga into one of the biggest gaming compan…</span>
+        <div class="qs-item-body">
+          <a href="https://fs.blog/knowledge-project-podcast/mark-pincus/" target="_blank" rel="noopener" class="qs-link">Proven, Better, New: Mark Pincus on the Rules of Innovation</a>
+          <div class="qs-meta">
+            <span class="qs-source">Farnam Street</span>
+            <span class="qs-snippet">— Mark Pincus is the creator behind Farmville and Words with Friends. He built Zynga into one of the biggest gaming compan…</span>
+          </div>
+        </div>
       </li>
       <li class="qs-item">
-        <a href="https://fs.blog/knowledge-project-podcast/outliers-chung-ju-yung/" target="_blank" rel="noopener" class="qs-link">
-          [Outliers] Chung Ju-yung: The Hyundai Founder Who Put a Country on His Back 
-        </a>
-        <span class="qs-source">Farnam Street</span>
-        <span class="qs-snippet">Chung Ju-yung built Hyundai because he refused to be stopped. He is known for turning Hyundai into an industrial force t…</span>
+        <div class="qs-item-body">
+          <a href="https://fs.blog/knowledge-project-podcast/outliers-chung-ju-yung/" target="_blank" rel="noopener" class="qs-link">[Outliers] Chung Ju-yung: The Hyundai Founder Who Put a Country on His Back </a>
+          <div class="qs-meta">
+            <span class="qs-source">Farnam Street</span>
+            <span class="qs-snippet">— Chung Ju-yung built Hyundai because he refused to be stopped. He is known for turning Hyundai into an industrial force t…</span>
+          </div>
+        </div>
       </li></ul>
       </div>
       <div class="qs-theme">
         <div class="qs-theme-label">Founder Lens</div>
         <ul class="qs-list">
       <li class="qs-item">
-        <a href="https://www.acquired.fm/episodes/vanguard" target="_blank" rel="noopener" class="qs-link">
-          Vanguard
-        </a>
-        <span class="qs-source">Acquired FM</span>
-        <span class="qs-snippet">Vanguard is the most effective vehicle ever created for participating in the fruits of American capitalism. Today it’s t…</span>
+        <div class="qs-item-body">
+          <a href="https://www.ycombinator.com/blog/welcome-harshita/" target="_blank" rel="noopener" class="qs-link">Harshita Arora Joins YC as General Partner</a>
+          <div class="qs-meta">
+            <span class="qs-source">YC Blog</span>
+            <span class="qs-snippet">— We're thrilled to announce that Harshita Arora is joining Y Combinator as a General Partner.  She brings deep fintech an…</span>
+          </div>
+        </div>
       </li>
       <li class="qs-item">
-        <a href="https://www.acquired.fm/episodes/ferrari" target="_blank" rel="noopener" class="qs-link">
-          Ferrari
-        </a>
-        <span class="qs-source">Acquired FM</span>
-        <span class="qs-snippet">Ferrari is the pinnacle of luxury scarcity — across its entire 79-year history, the company has sold just 330,000 cars a…</span>
+        <div class="qs-item-body">
+          <a href="https://www.ycombinator.com/blog/adding-canada-back/" target="_blank" rel="noopener" class="qs-link">Adding Canada Back to Our List of Accepted Countries of Incorporation</a>
+          <div class="qs-meta">
+            <span class="qs-source">YC Blog</span>
+            <span class="qs-snippet">— After hearing feedback from Canadian founders in our network, we are adding Canada back to our list of accepted countrie…</span>
+          </div>
+        </div>
       </li>
       <li class="qs-item">
-        <a href="https://www.acquired.fm/episodes/formula-1" target="_blank" rel="noopener" class="qs-link">
-          Formula 1
-        </a>
-        <span class="qs-source">Acquired FM</span>
-        <span class="qs-snippet">Formula 1 is three competitions in one: a 200mph battle of the world's best race car drivers, the world cup of engineeri…</span>
+        <div class="qs-item-body">
+          <a href="https://www.ycombinator.com/blog/congratulations-to-equipmentshare/" target="_blank" rel="noopener" class="qs-link">Congratulations to EquipmentShare on Going Public</a>
+          <div class="qs-meta">
+            <span class="qs-source">YC Blog</span>
+            <span class="qs-snippet">— Today, EquipmentShare (YC W15) goes public. From Missouri to 373 locations nationwide, they've built the operating syste…</span>
+          </div>
+        </div>
       </li></ul>
       </div>
       <div class="qs-theme">
         <div class="qs-theme-label">Primary Sources</div>
         <ul class="qs-list">
       <li class="qs-item">
-        <a href="https://www.ft.com/content/d97c7243-19a2-49da-9e10-a565a2204bc0" target="_blank" rel="noopener" class="qs-link">
-          Iran and Israel call halt to military operations
-        </a>
-        <span class="qs-source">Financial Times</span>
-        <span class="qs-snippet">Retaliatory barrages had tested two-month truce and Trump’s efforts to forge wider peace deal…</span>
+        <div class="qs-item-body">
+          <a href="https://www.ft.com/content/d97c7243-19a2-49da-9e10-a565a2204bc0" target="_blank" rel="noopener" class="qs-link">Iran and Israel call halt to military operations</a>
+          <div class="qs-meta">
+            <span class="qs-source">Financial Times</span>
+            <span class="qs-snippet">— Retaliatory barrages had tested two-month truce and Trump’s efforts to forge wider peace deal…</span>
+          </div>
+        </div>
       </li>
       <li class="qs-item">
-        <a href="https://www.ft.com/content/7a96137c-63ce-4115-a362-f36fe68a1469" target="_blank" rel="noopener" class="qs-link">
-          Lebanon’s intractable crisis pulls Israel and Iran back towards war
-        </a>
-        <span class="qs-source">Financial Times</span>
-        <span class="qs-snippet">Impasse over Hizbollah has repeatedly tested the fragile ceasefire between Tehran and Washington…</span>
+        <div class="qs-item-body">
+          <a href="https://www.ft.com/content/7a96137c-63ce-4115-a362-f36fe68a1469" target="_blank" rel="noopener" class="qs-link">Lebanon’s intractable crisis pulls Israel and Iran back towards war</a>
+          <div class="qs-meta">
+            <span class="qs-source">Financial Times</span>
+            <span class="qs-snippet">— Impasse over Hizbollah has repeatedly tested the fragile ceasefire between Tehran and Washington…</span>
+          </div>
+        </div>
       </li>
       <li class="qs-item">
-        <a href="https://www.ft.com/content/a0ce59f9-fbde-49e8-9158-fba3d4079859" target="_blank" rel="noopener" class="qs-link">
-          Trump says Netanyahu will have ‘no choice’ but to accept a deal with Iran
-        </a>
-        <span class="qs-source">Financial Times</span>
-        <span class="qs-snippet">US president tells FT that he ‘calls the shots’ after urging the Israeli leader not to retaliate against Tehran…</span>
+        <div class="qs-item-body">
+          <a href="https://www.ft.com/content/a0ce59f9-fbde-49e8-9158-fba3d4079859" target="_blank" rel="noopener" class="qs-link">Trump says Netanyahu will have ‘no choice’ but to accept a deal with Iran</a>
+          <div class="qs-meta">
+            <span class="qs-source">Financial Times</span>
+            <span class="qs-snippet">— US president tells FT that he ‘calls the shots’ after urging the Israeli leader not to retaliate against Tehran…</span>
+          </div>
+        </div>
       </li></ul>
       </div>
       <div class="qs-theme">
         <div class="qs-theme-label">Builder Biographies</div>
         <ul class="qs-list">
       <li class="qs-item">
-        <a href="https://colossus.com/episode/order-out-of-chaos/" target="_blank" rel="noopener" class="qs-link">
-          Dara Khosrowshahi - Uber's Bet on AVs, AI, and Building a Super-App - [Invest Like the Best, EP.476]
-        </a>
-        <span class="qs-source">Invest Like the Best</span>
-        <span class="qs-snippet">My guest today is Dara Khosrowshahi, the CEO of Uber. Before Uber, Dara ran Expedia for thirteen years. We start with wh…</span>
+        <div class="qs-item-body">
+          <a href="https://colossus.com/episode/order-out-of-chaos/" target="_blank" rel="noopener" class="qs-link">Dara Khosrowshahi - Uber's Bet on AVs, AI, and Building a Super-App - [Invest Like the Best, EP.476]</a>
+          <div class="qs-meta">
+            <span class="qs-source">Invest Like the Best</span>
+            <span class="qs-snippet">— My guest today is Dara Khosrowshahi, the CEO of Uber. Before Uber, Dara ran Expedia for thirteen years. We start with wh…</span>
+          </div>
+        </div>
       </li>
       <li class="qs-item">
-        <a href="https://colossus.com/episode/reminiscences-of-an-investor/" target="_blank" rel="noopener" class="qs-link">
-          Dan Loeb - Lessons from 30 Years of Investing - [Invest Like the Best, EP.475]
-        </a>
-        <span class="qs-source">Invest Like the Best</span>
-        <span class="qs-snippet">My guest today is Dan Loeb, the founder and CEO of Third Point. 
+        <div class="qs-item-body">
+          <a href="https://colossus.com/episode/reminiscences-of-an-investor/" target="_blank" rel="noopener" class="qs-link">Dan Loeb - Lessons from 30 Years of Investing - [Invest Like the Best, EP.475]</a>
+          <div class="qs-meta">
+            <span class="qs-source">Invest Like the Best</span>
+            <span class="qs-snippet">— My guest today is Dan Loeb, the founder and CEO of Third Point. 
 
 Dan started Third Point in 1995 with a few million dol…</span>
+          </div>
+        </div>
       </li>
       <li class="qs-item">
-        <a href="https://colossus.com/episode/the-new-rules-of-war/" target="_blank" rel="noopener" class="qs-link">
-          Darren Farber on Iran, China, and the Rise of Neoprimes - [Invest Like the Best, EP.474]
-        </a>
-        <span class="qs-source">Invest Like the Best</span>
-        <span class="qs-snippet">My guest today is Darren Farber, and this is his second appearance on the show.
+        <div class="qs-item-body">
+          <a href="https://colossus.com/episode/the-new-rules-of-war/" target="_blank" rel="noopener" class="qs-link">Darren Farber on Iran, China, and the Rise of Neoprimes - [Invest Like the Best, EP.474]</a>
+          <div class="qs-meta">
+            <span class="qs-source">Invest Like the Best</span>
+            <span class="qs-snippet">— My guest today is Darren Farber, and this is his second appearance on the show.
 
 Darren is a Managing Partner of Albion…</span>
+          </div>
+        </div>
       </li></ul>
       </div>
       <div class="qs-theme">
         <div class="qs-theme-label">Culture &amp; Design</div>
         <ul class="qs-list">
       <li class="qs-item">
-        <a href="https://www.wired.com/story/all-the-ways-europe-is-ditching-american-technology/" target="_blank" rel="noopener" class="qs-link">
-          All the Ways Europe Is Ditching American Technology
-        </a>
-        <span class="qs-source">Wired Business</span>
-        <span class="qs-snippet">A WIRED timeline shows how dozens of governments, companies, and other organizations across Europe are moving, or planni…</span>
+        <div class="qs-item-body">
+          <a href="https://www.wired.com/story/all-the-ways-europe-is-ditching-american-technology/" target="_blank" rel="noopener" class="qs-link">All the Ways Europe Is Ditching American Technology</a>
+          <div class="qs-meta">
+            <span class="qs-source">Wired Business</span>
+            <span class="qs-snippet">— A WIRED timeline shows how dozens of governments, companies, and other organizations across Europe are moving, or planni…</span>
+          </div>
+        </div>
       </li>
       <li class="qs-item">
-        <a href="https://www.wired.com/story/how-to-spot-greenwashing-when-you-travel/" target="_blank" rel="noopener" class="qs-link">
-          How to Spot Greenwashing Claims When You Travel
-        </a>
-        <span class="qs-source">Wired Business</span>
-        <span class="qs-snippet">Hotels and other service providers pitch themselves as eco-friendly when they’re not. Here’s how to call their bluff.…</span>
+        <div class="qs-item-body">
+          <a href="https://www.wired.com/story/how-to-spot-greenwashing-when-you-travel/" target="_blank" rel="noopener" class="qs-link">How to Spot Greenwashing Claims When You Travel</a>
+          <div class="qs-meta">
+            <span class="qs-source">Wired Business</span>
+            <span class="qs-snippet">— Hotels and other service providers pitch themselves as eco-friendly when they’re not. Here’s how to call their bluff.…</span>
+          </div>
+        </div>
       </li>
       <li class="qs-item">
-        <a href="https://www.wired.com/story/has-microsoft-lost-its-mojo-again/" target="_blank" rel="noopener" class="qs-link">
-          Has Microsoft Lost Its Mojo (Again)?
-        </a>
-        <span class="qs-source">Wired Business</span>
-        <span class="qs-snippet">Microsoft’s AI products aren’t selling, and Github’s been plagued with troubles. WIRED spoke with VP Scott Hanselman abo…</span>
+        <div class="qs-item-body">
+          <a href="https://www.wired.com/story/has-microsoft-lost-its-mojo-again/" target="_blank" rel="noopener" class="qs-link">Has Microsoft Lost Its Mojo (Again)?</a>
+          <div class="qs-meta">
+            <span class="qs-source">Wired Business</span>
+            <span class="qs-snippet">— Microsoft’s AI products aren’t selling, and Github’s been plagued with troubles. WIRED spoke with VP Scott Hanselman abo…</span>
+          </div>
+        </div>
       </li></ul>
       </div>
       <div class="qs-theme">
         <div class="qs-theme-label">Tech &amp; AI</div>
         <ul class="qs-list">
       <li class="qs-item">
-        <a href="https://techcrunch.com/2026/06/08/how-to-apply-to-startup-battlefield-2026-what-you-need-ahead-of-todays-june-8-deadline/" target="_blank" rel="noopener" class="qs-link">
-          How to apply to Startup Battlefield 2026, what you need ahead of today’s June 8 deadline
-        </a>
-        <span class="qs-source">TechCrunch</span>
-        <span class="qs-snippet">Startup Battlefield applications are due tomorrow, so now's the time to put the finishing touches on your submission!…</span>
+        <div class="qs-item-body">
+          <a href="https://techcrunch.com/2026/06/08/how-to-apply-to-startup-battlefield-2026-what-you-need-ahead-of-todays-june-8-deadline/" target="_blank" rel="noopener" class="qs-link">How to apply to Startup Battlefield 2026, what you need ahead of today’s June 8 deadline</a>
+          <div class="qs-meta">
+            <span class="qs-source">TechCrunch</span>
+            <span class="qs-snippet">— Startup Battlefield applications are due tomorrow, so now's the time to put the finishing touches on your submission!…</span>
+          </div>
+        </div>
       </li>
       <li class="qs-item">
-        <a href="https://techcrunch.com/2026/06/08/notebooklms-new-update-will-help-you-build-source-repository-from-chat/" target="_blank" rel="noopener" class="qs-link">
-          NotebookLM’s new update will help you build source repository from chat
-        </a>
-        <span class="qs-source">TechCrunch</span>
-        <span class="qs-snippet">Google is making Gemini 3.5 the default model in NotebookLM…</span>
+        <div class="qs-item-body">
+          <a href="https://techcrunch.com/2026/06/08/notebooklms-new-update-will-help-you-build-source-repository-from-chat/" target="_blank" rel="noopener" class="qs-link">NotebookLM’s new update will help you build source repository from chat</a>
+          <div class="qs-meta">
+            <span class="qs-source">TechCrunch</span>
+            <span class="qs-snippet">— Google is making Gemini 3.5 the default model in NotebookLM…</span>
+          </div>
+        </div>
       </li>
       <li class="qs-item">
-        <a href="https://techcrunch.com/2026/06/08/amazon-now-lets-you-design-custom-merch-using-ai/" target="_blank" rel="noopener" class="qs-link">
-          Amazon now lets you design custom merch using AI
-        </a>
-        <span class="qs-source">TechCrunch</span>
-        <span class="qs-snippet">A new feature in the Amazon Shopping app allows users to generate designs with Alexa, then print them on products like T…</span>
+        <div class="qs-item-body">
+          <a href="https://techcrunch.com/2026/06/08/amazon-now-lets-you-design-custom-merch-using-ai/" target="_blank" rel="noopener" class="qs-link">Amazon now lets you design custom merch using AI</a>
+          <div class="qs-meta">
+            <span class="qs-source">TechCrunch</span>
+            <span class="qs-snippet">— A new feature in the Amazon Shopping app allows users to generate designs with Alexa, then print them on products like T…</span>
+          </div>
+        </div>
       </li></ul>
       </div>
       <div class="qs-theme">
         <div class="qs-theme-label">Competitive Intel</div>
         <ul class="qs-list">
       <li class="qs-item">
-        <a href="https://stratechery.com/2026/google-buys-compute-from-spacex-broadcoms-outlook-apples-ai-politics/" target="_blank" rel="noopener" class="qs-link">
-          Google Buys Compute From SpaceX, Broadcom’s Outlook, Apple’s AI Politics
-        </a>
-        <span class="qs-source">Stratechery</span>
-        <span class="qs-snippet">Google's deal with SpaceX, and Broadcom's earnings, both seem bullish for Nvidia. Then, what I'm looking for at WWDC.…</span>
+        <div class="qs-item-body">
+          <a href="https://stratechery.com/2026/google-buys-compute-from-spacex-broadcoms-outlook-apples-ai-politics/" target="_blank" rel="noopener" class="qs-link">Google Buys Compute From SpaceX, Broadcom’s Outlook, Apple’s AI Politics</a>
+          <div class="qs-meta">
+            <span class="qs-source">Stratechery</span>
+            <span class="qs-snippet">— Google's deal with SpaceX, and Broadcom's earnings, both seem bullish for Nvidia. Then, what I'm looking for at WWDC.…</span>
+          </div>
+        </div>
       </li>
       <li class="qs-item">
-        <a href="https://stratechery.com/2026/power-shifts/" target="_blank" rel="noopener" class="qs-link">
-          2026.23: Power Shifts
-        </a>
-        <span class="qs-source">Stratechery</span>
-        <span class="qs-snippet">The best Stratechery content from the week of June 1, 2026, including Google and Microsoft, YouTubers taking over Hollyw…</span>
+        <div class="qs-item-body">
+          <a href="https://stratechery.com/2026/power-shifts/" target="_blank" rel="noopener" class="qs-link">2026.23: Power Shifts</a>
+          <div class="qs-meta">
+            <span class="qs-source">Stratechery</span>
+            <span class="qs-snippet">— The best Stratechery content from the week of June 1, 2026, including Google and Microsoft, YouTubers taking over Hollyw…</span>
+          </div>
+        </div>
       </li>
       <li class="qs-item">
-        <a href="https://stratechery.com/2026/an-interview-with-microsoft-ceo-satya-nadella-about-finding-core-competencies/" target="_blank" rel="noopener" class="qs-link">
-          An Interview with Microsoft CEO Satya Nadella About Finding Core Competencies
-        </a>
-        <span class="qs-source">Stratechery</span>
-        <span class="qs-snippet">An interview with Microsoft CEO Satya Nadella about figuring out Microsoft's role in AI, the relationship with OpenAI, C…</span>
+        <div class="qs-item-body">
+          <a href="https://stratechery.com/2026/an-interview-with-microsoft-ceo-satya-nadella-about-finding-core-competencies/" target="_blank" rel="noopener" class="qs-link">An Interview with Microsoft CEO Satya Nadella About Finding Core Competencies</a>
+          <div class="qs-meta">
+            <span class="qs-source">Stratechery</span>
+            <span class="qs-snippet">— An interview with Microsoft CEO Satya Nadella about figuring out Microsoft's role in AI, the relationship with OpenAI, C…</span>
+          </div>
+        </div>
       </li></ul>
       </div></div>
 </section>
@@ -240,39 +285,39 @@ Darren is a Managing Partner of Albion…</span>
 <article class="story">
   <header class="story-header">
     <h2>How to apply to Startup Battlefield 2026, what you need ahead of today's June 8 deadline</h2>
-    <div class="meta"><span class="source">TechCrunch</span> · <span class="read-time">12 min</span></div>
+    <div class="meta"><span class="source">TechCrunch</span> · <span class="read-time">8 min</span></div>
   </header>
 
-  <blockquote class="quick-take">The best founders almost don't apply because they mistake polish for promise. TechCrunch's selection process reveals a brutal truth: competitions aren't won by the most ready companies, but by those solving problems that make existing solutions feel obsolete. The paradox? Most founders optimize for looking credible instead of being memorable—they over-polish applications until the actual company disappears behind corporate speak. This isn't about impressing judges; it's about proving you see something the market doesn't yet.</blockquote>
+  <blockquote class="quick-take">The companies that belong on stage are the ones who almost didn't apply. This is the founder paradox: competence creates self-doubt. The best founders underestimate themselves because they see the full complexity of their problem. Meanwhile, mediocre founders overestimate because they don't know what they don't know. TechCrunch's selection criteria reveals what sophisticated investors actually look for — and it's not polish, it's conviction married to category-defining disruption.</blockquote>
 
   <section class="section">
     <h3>What Happened</h3>
-    <p>TechCrunch's Head of Startup Battlefield published selection criteria for their 2026 competition at Disrupt (Oct 13-15). Key requirements: working MVP (not mockup), clear competitive positioning, compelling founder narrative, and category-defining potential. Pre-launch companies welcome; Series A reviewed case-by-case. Geographic and industry diversity actively sought. The reviewer reads thousands of applications annually and emphasizes showing product working in real-time over polished pitch decks.</p>
+    <p>TechCrunch published detailed application guidance for Startup Battlefield 2026, extending the deadline to June 8. The article reveals selection criteria from someone who reads thousands of applications annually. Key requirements: working MVP (not mockups), clear competitive positioning, authentic founder story, and category-defining potential. Pre-launch companies welcome, press coverage doesn't disqualify, previous rejections don't matter.</p>
   </section>
 
   <section class="section">
     <h3>Business Model Breakdown</h3>
-    <p>Startup Battlefield is a marquee program within TechCrunch Disrupt (ticket-driven conference revenue model). Selected startups get global exposure, investor access, and potential $200K equity-free prize. For TechCrunch: drives conference attendance, content pipeline, and deal flow relationships. For startups: it's distribution arbitrage—trading working product demo for massive media amplification they couldn't buy.</p>
+    <p>Startup Battlefield is a platform play: TechCrunch monetizes through conference tickets, media attention, and ecosystem positioning. Winners get $200K equity-free plus massive visibility. For TechCrunch, it's content generation (alumni stories), deal flow cultivation (for their venture arm), and brand reinforcement as kingmaker. The asymmetric value exchange: founders get distribution, investors get pre-filtered deal flow, TechCrunch gets both.</p>
   </section>
 
   <section class="section">
     <h3>What Makes Them Succeed</h3>
-    <p>Two-decade brand moat as startup kingmaker (alumni include Cloudflare, Discord). The unfair advantage: they offer something VCs can't—public validation before you've proven traction. Their curation rigor creates selection signal; getting in means something because most don't. They've mastered identifying inflection points: companies ready to breakout but pre-breakout pricing/awareness.</p>
+    <p>TechCrunch has 17+ years of Battlefield alumni data showing which early signals predict breakout companies. Their unfair advantage is pattern recognition at scale — they've seen Cloudflare, Discord, Dropbox when they were raw. They're optimizing for a different signal than most accelerators: not current traction but future category disruption. Geographic and industry diversity isn't virtue signaling; it's arbitrage hunting in underexplored markets.</p>
   </section>
 
   <section class="section">
     <h3>First Principles</h3>
-    <p>Stories scale better than features. Human attention gravitates toward change narratives, not incremental improvement. The program works because early-stage companies need credibility more than capital—and credibility compounds fastest through concentrated attention from tier-one audiences. You can't buy this kind of signal; you have to earn selection.</p>
+    <p>The best predictor of future returns is founder conviction about a problem others don't see yet, combined with product proof that their solution works. Not revenue, not polish — working product plus unique insight. This is why 'We have no competitors' kills applications: it signals the founder doesn't understand their market. True insight requires acknowledging reality, then explaining why your approach wins anyway.</p>
   </section>
 
   <section class="section highlight">
     <h3>Why It Matters to You</h3>
-    <p>EasyBuzz is exactly the profile they want: pre-launch/early traction, underrepresented geography (Malaysia/SEA), clear product (video SaaS for SMEs), founder with conviction about market timing. At $29-249/month targeting Malaysian SMEs, this is a category-defining play for a market Silicon Valley doesn't see. The geographic diversity mandate is your edge—you're not competing against 10,000 Bay Area SaaS companies; you're one of few strong SEA B2B contenders. Application deadline June 8, 2026.</p>
+    <p>Janice is exactly who this is written for: SEA market (geographic diversity advantage), building in underserved vertical (Malaysian SME video content), has working MVP. The 'pre-revenue is fine' signal matters — EasyBuzz's early traction at $29-$249/month shows pricing conviction but volume uncertainty. TechCrunch explicitly says 'If you're building something important in a geography that doesn't often get spotlight, that matters to us.' This is EasyBuzz's asymmetric opportunity window.</p>
   </section>
 
   <section class="section steal">
     <h3>What to Steal</h3>
-    <p>1) Show working MVP in real-time, even if rough—screen recording from your phone beats animated explainer video. 2) Competitive positioning formula: name competitors honestly, then articulate your specific win condition (don't say 'no competitors'). 3) Lead with founder narrative: why you, why now, why this problem—most founders under-write origin story when it's the most memorable part. 4) Don't optimize for polish; optimize for showing conviction and making the existing market feel obsolete.</p>
+    <p>1) Ship a 2-minute screen recording showing EasyBuzz working with a real Malaysian SME, messy UI and all — authenticity beats polish. 2) Frame competitive positioning as 'We compete with Canva for video + in-house video teams, but we win because Malaysian SMEs can't afford either and need SEA-specific templates/workflows.' Name the giants, explain the wedge. 3) Lead your story with the moment you realized Malaysian SMEs were spending 40+ hours/month on video content that generated zero engagement — make the pain visceral, personal, and category-defining.</p>
   </section>
 
   <a class="source-link" href="https://techcrunch.com/2026/06/08/how-to-apply-to-startup-battlefield-2026-what-you-need-ahead-of-todays-june-8-deadline/" target="_blank" rel="noopener">Read original →</a>
@@ -281,39 +326,39 @@ Darren is a Managing Partner of Albion…</span>
 <article class="story">
   <header class="story-header">
     <h2>NotebookLM's new update will help you build source repository from chat</h2>
-    <div class="meta"><span class="source">TechCrunch</span> · <span class="read-time">8 min</span></div>
+    <div class="meta"><span class="source">TechCrunch</span> · <span class="read-time">6 min</span></div>
   </header>
 
-  <blockquote class="quick-take">Google just inverted the knowledge work paradigm: instead of you bringing sources to the AI, the AI now hunts sources for you. This flips NotebookLM from a research assistant to a research initiator. The psychological shift is profound—users no longer need to overcome the activation energy of 'gathering materials.' They can start with curiosity instead of preparation. This is Google weaponizing its search dominance to make researchfrictionless, while locking users deeper into their ecosystem by making the starting point a conversation, not a document.</blockquote>
+  <blockquote class="quick-take">Google just inverted the research workflow. Instead of 'bring your sources, then query,' it's now 'ask questions, we'll find sources.' This is the LLM interface evolution pattern: start constrained (your documents only), then expand capabilities until the tool anticipates needs. The deeper insight: knowledge work is shifting from curation to conversation. The bottleneck isn't finding information — it's knowing what questions to ask and how to synthesize across sources.</blockquote>
 
   <section class="section">
     <h3>What Happened</h3>
-    <p>Google upgraded NotebookLM to Gemini 3.5 with major workflow changes. Previously required users to upload sources first. Now users can start with questions; NotebookLM suggests sources via Google Search integration, builds knowledge base automatically, and supports multilingual source discovery. Added detailed export formats (charts, structured data, Office files) and 'show your thinking' transparency feature revealing research steps. Available to Google AI Ultra and Workspace business customers first, broader rollout planned.</p>
+    <p>Google upgraded NotebookLM with Gemini 3.5, adding AI-powered source discovery via Google Search, multi-format export capabilities (charts, data visualizations, Excel, PowerPoint), and transparent reasoning trails showing how it reached conclusions. Previously required users to upload sources first. Now you can start with questions and NotebookLM suggests relevant sources, finds primary materials in other languages, discovers related authors. Available to Google AI Ultra and Workspace business customers first.</p>
   </section>
 
   <section class="section">
     <h3>Business Model Breakdown</h3>
-    <p>NotebookLM monetizes through Google Workspace subscriptions (AI Ultra/Expanded Access tiers). The economic logic: reduce friction in knowledge work to increase stickiness of Workspace suite, justify premium pricing, and create switching costs. By integrating Search, they're leveraging an existing zero-marginal-cost asset (search index) to add value to a high-margin subscription product. Unit economics improve as usage scales because search infrastructure is already paid for.</p>
+    <p>NotebookLM is a retention and upsell lever for Google Workspace/AI Ultra subscriptions. Free tier generates usage data to train models; premium features (Deep Research, advanced exports, team collaboration) drive enterprise adoption. The real revenue model is compute stickiness — once research workflows depend on NotebookLM, switching costs become prohibitive. Export formats target enterprise use cases (Excel, PowerPoint) to embed into knowledge worker daily workflows, making Google AI infrastructure the substrate for corporate intelligence.</p>
   </section>
 
   <section class="section">
     <h3>What Makes Them Succeed</h3>
-    <p>Unfair advantage #1: Google Search integration—no competitor can match source discovery breadth. #2: Gemini 3.5's reasoning capabilities let them show 'thinking' steps, building trust in AI-generated research. #3: Distribution through Workspace—they're not acquiring users; they're upgrading existing customers. The moat deepens every time someone builds a source repository in NotebookLM; switching costs compound with accumulated research.</p>
+    <p>Google's moat is vertical integration: they own the search index, the AI models, the productivity suite, and the cloud infrastructure. NotebookLM isn't competing on features — it's competing on context breadth. By combining Google Search (web-scale knowledge), Workspace data (corporate knowledge), and Gemini reasoning, they create a compound advantage no standalone tool can match. The 'Antigravity-powered software skills' (likely referring to multi-modal code execution) means NotebookLM can generate, not just synthesize — creating charts, running analyses, producing artifacts.</p>
   </section>
 
   <section class="section">
     <h3>First Principles</h3>
-    <p>Lower activation energy increases usage frequency. People procrastinate starting research because gathering sources feels like work before the real work begins. By making the chat interface the starting point, Google exploits loss aversion—users avoid feeling 'unprepared' so they don't start. Remove that friction, and research becomes conversational. The fundamental insight: in knowledge work, the blank page problem isn't writing; it's sourcing.</p>
+    <p>The future of knowledge work is conversational intelligence with artifact generation. Raw information is abundant and near-zero cost. Value now comes from: 1) Asking the right questions, 2) Cross-pollinating disparate sources, 3) Synthesizing into executable formats. NotebookLM succeeds because it reduces friction at each step. The transparent reasoning ('show your work') addresses the AI trust problem — users need to verify, not just accept. This is why showing 'detailed steps in chat about how it arrived at answers' matters: it converts black box outputs into auditable reasoning chains.</p>
   </section>
 
   <section class="section highlight">
     <h3>Why It Matters to You</h3>
-    <p>EasyBuzz is a content creation tool for Malaysian SMEs who struggle with video production. NotebookLM's evolution shows how AI can reduce 'setup friction'—the resistance users feel before they even start creating. Your SME customers face similar psychological barriers: 'I don't know what to film' or 'I need to plan content first.' If NotebookLM can eliminate research prep, can EasyBuzz eliminate content planning prep? This is about workflow design, not just features.</p>
+    <p>NotebookLM is Google's play for the exact workflow EasyBuzz users need: Malaysian SMEs researching video content strategies, competitive analysis, trend identification. If Google succeeds in making NotebookLM the default research interface, it trains users to expect 'question → AI research → formatted output' workflows. For EasyBuzz, this creates both threat and opportunity. Threat: Users may expect similar 'just ask' interfaces in video tools. Opportunity: Partner with Google's paradigm — EasyBuzz could offer 'describe your video goal, we research and suggest content templates' rather than browsing a template library.</p>
   </section>
 
   <section class="section steal">
     <h3>What to Steal</h3>
-    <p>1) Invert the workflow: Instead of 'upload content to edit,' try 'describe what you want to say, we'll suggest format/templates/clips.' Lower the activation energy. 2) Show your thinking: Add transparency to AI decisions in EasyBuzz—let users see why the AI suggested certain cuts, music, or templates. Trust compounds. 3) Leverage existing zero-marginal-cost assets: You likely have template libraries, successful video patterns from other users—surface these as automatic suggestions based on user intent, not manual browsing.</p>
+    <p>1) Flip your onboarding from 'Browse 100 templates' to 'Tell me about your business and video goals' — let AI suggest relevant templates based on industry, audience, and objectives. 2) Add transparent reasoning to AI suggestions: 'We recommended this hook style because similar Malaysian F&amp;B businesses get 40% higher retention in first 3 seconds.' Show your work to build trust. 3) Export in client-ready formats (scheduled social posts, MP4 files, analytics reports) — make EasyBuzz the artifact generator, not just the video editor. Users don't want to 'use video software,' they want finished videos that drive business results.</p>
   </section>
 
   <a class="source-link" href="https://techcrunch.com/2026/06/08/notebooklms-new-update-will-help-you-build-source-repository-from-chat/" target="_blank" rel="noopener">Read original →</a>
@@ -322,39 +367,39 @@ Darren is a Managing Partner of Albion…</span>
 <article class="story">
   <header class="story-header">
     <h2>Amazon now lets you design custom merch using AI</h2>
-    <div class="meta"><span class="source">TechCrunch</span> · <span class="read-time">7 min</span></div>
+    <div class="meta"><span class="source">TechCrunch</span> · <span class="read-time">5 min</span></div>
   </header>
 
-  <blockquote class="quick-take">Amazon just commoditized custom merchandise by embedding AI design directly into its Shopping app—no design skills, no external platforms, just prompts and Prime shipping. This is the 'Shein-ification' of print-on-demand: hyper-accessible, impulse-driven, algorithmically-generated products that collapse the gap between idea and purchase to seconds. The strategic violence here is brutal—Amazon isn't competing with Redbubble; it's erasing the need for Redbubble to exist by making creation feel like shopping. This is platform power weaponized: own fulfillment, own AI, own the last mile.</blockquote>
+  <blockquote class="quick-take">Amazon just weaponized AI against the entire print-on-demand creator economy. By embedding AI design + instant fulfillment inside their shopping app, they eliminated two friction points: design skill and marketplace discovery. This is the aggregator playbook perfected — own the customer relationship, commoditize suppliers, compress margins. The deeper pattern: AI is collapsing specialized marketplaces into general platforms. When creation becomes prompt → product in 60 seconds, standalone creator platforms lose their moat.</blockquote>
 
   <section class="section">
     <h3>What Happened</h3>
-    <p>Amazon launched AI-generated merch design via Alexa in its Shopping app (US only). Users describe designs via text prompts; AI generates images printable on T-shirts, hoodies, tumblers, water bottles (14 product types total). Amazon handles production through Merch on Demand, ships via Prime. Free to use; customers pay only for products. Competing directly with Redbubble, Bonfire, Spring, Fourthwall and other print-on-demand platforms. Lowers barrier from 'I need design skills' to 'I can describe an idea.'</p>
+    <p>Amazon launched AI-powered merchandise design inside its Shopping app, allowing anyone to create custom designs via Alexa prompts and print them on T-shirts, hoodies, tumblers, etc. through Merch on Demand. Handles production and Prime delivery. Previously, print-on-demand required using platforms like Redbubble, Bonfire, or Spring. Now available US-only, free to use (customers only pay for products). Supports 12+ product types with iterative editing and social sharing.</p>
   </section>
 
   <section class="section">
     <h3>Business Model Breakdown</h3>
-    <p>Classic Amazon platform economics: zero setup cost for users (Amazon captures design intent), production-on-demand (no inventory risk), fulfillment at scale (leverage existing Prime logistics), take rate on each transaction. The genius: they're not selling software; they're selling products with AI-enabled customization as the hook. Unit economics work because production and shipping infrastructure already exists—AI design is just demand generation for underutilized print capacity.</p>
+    <p>This is vertical integration into the creator economy. Amazon makes money on: 1) Product markup (they control manufacturing and pricing), 2) Prime subscription reinforcement (fast delivery for custom goods increases Prime value), 3) First-party data (learning what designs people want, what prompts work, which products sell — data competitors can't access). Traditional print-on-demand platforms charge creators 15-30% commissions. Amazon can undercut because they don't need marketplace margin — they monetize through volume, Prime retention, and advertising ecosystem (inevitably, promoted custom designs will appear in search).</p>
   </section>
 
   <section class="section">
     <h3>What Makes Them Succeed</h3>
-    <p>Three compounding advantages: 1) Prime logistics moat—competitors can't match delivery speed/cost. 2) Alexa integration—design becomes conversational, not transactional; reduces perceived complexity. 3) Shopping app distribution—300M+ users already browsing; zero acquisition cost. They're not building a new behavior; they're adding AI generation to existing shopping sessions. The unfair advantage is vertical integration: own AI, own production, own fulfillment, own customer relationship.</p>
+    <p>Amazon's unfair advantages stack multiplicatively: 1) 310M active customers already shopping, zero customer acquisition cost, 2) Fulfilled by Amazon infrastructure turns 'custom' into commodity speed (2-day delivery for personalized goods), 3) Alexa as the interface means voice→product, lowering creation barrier to near-zero, 4) AI model trained on billions of shopping queries knows what designs sell. Most critically: they own the intent moment. Users aren't browsing a creator marketplace; they're shopping and can spontaneously create. This is impulse purchase applied to customization.</p>
   </section>
 
   <section class="section">
     <h3>First Principles</h3>
-    <p>Reduce degrees of separation between intent and transaction. Every step between 'I want this' and 'I have this' is friction that kills conversion. Traditional custom merch: idea → learn design tools → create design → find print service → compare shipping → order → wait. Amazon: idea → prompt → buy → Prime delivery. They collapsed six decision points into two. The fundamental truth: in consumer behavior, convenience compounds faster than quality.</p>
+    <p>When creation cost approaches zero and distribution is instant, the bottleneck becomes intent capture. Traditional creator platforms solve 'I want to sell designs' (supply). Amazon solves 'I want this specific thing to exist' (demand). The former requires building an audience; the latter just requires a shopping impulse. This is why embedded creation beats standalone marketplaces — you capture intent at the moment of desire, not after someone has built a creator business. The AI layer accelerates this: prompt→product in minutes means people don't abandon due to complexity.</p>
   </section>
 
   <section class="section highlight">
     <h3>Why It Matters to You</h3>
-    <p>EasyBuzz is competing in the same war: collapsing complexity for SMEs who 'want video content but don't know how to make it.' Amazon's playbook is your template: 1) Make creation feel like shopping (browse, pick, done). 2) Leverage existing infrastructure (your customers already create social posts—can you turn posts into videos automatically?). 3) Remove tools entirely—prompts beat interfaces. Your Malaysian SME customers don't want to 'learn video editing'; they want video content. Can you make video generation feel as simple as describing what they need?</p>
+    <p>This is a warning shot for EasyBuzz. Amazon's pattern: integrate AI creation into distribution platform, collapse specialist tools. For video, this looks like: Instagram/TikTok adding 'describe your video, we'll create it' directly in posting flow. EasyBuzz's current moat is templates + ease-of-use for Malaysian SMEs. But if social platforms add AI video creation natively, why leave the platform? Janice needs to solve a problem that can't be commoditized by platform integration. That problem is likely: brand consistency across videos, performance analytics, content strategy — things that require context across all a business's content, not just one video at a time.</p>
   </section>
 
   <section class="section steal">
     <h3>What to Steal</h3>
-    <p>1) Conversational creation over UI-driven creation: Add a 'describe your video' prompt that generates timeline, suggests templates, picks music—remove the blank canvas problem. 2) One-click to done: Study Amazon's flow from prompt → preview → edit → buy. Can you do describe → preview → export → post directly to TikTok/IG? 3) Leverage existing behavior: Malaysian SMEs already write social posts—can you auto-convert text posts into video scripts with suggested B-roll? Don't make them change behavior; augment existing behavior.</p>
+    <p>1) Study Amazon's 'suggest actions or type changes' editing flow — iterative refinement is more intuitive than complex upfront controls. Let users say 'make logo bigger' or 'add captions' after seeing a draft, rather than configuring everything before preview. 2) Social sharing that lets others order to their cart is brilliant for group use cases — apply this to EasyBuzz: 'Share draft video with your team, they can suggest edits without needing an account.' 3) The real insight is embedded creation in existing workflows. Don't make SMEs 'go to EasyBuzz to make videos.' Make videos inside where they already work: Shopify dashboard, Facebook Business Manager, Google My Business. Be the engine, not the destination.</p>
   </section>
 
   <a class="source-link" href="https://techcrunch.com/2026/06/08/amazon-now-lets-you-design-custom-merch-using-ai/" target="_blank" rel="noopener">Read original →</a>
@@ -363,39 +408,39 @@ Darren is a Managing Partner of Albion…</span>
 <article class="story">
   <header class="story-header">
     <h2>WWDC 2026: All the news from Apple's developers conference</h2>
-    <div class="meta"><span class="source">The Verge</span> · <span class="read-time">6 min</span></div>
+    <div class="meta"><span class="source">The Verge</span> · <span class="read-time">4 min</span></div>
   </header>
 
-  <blockquote class="quick-take">Apple is finally shipping the Siri overhaul delayed since 2024—powered by Google Gemini, not Apple's own AI—and this is Tim Cook's last keynote before John Ternus takes over as CEO. The strategic tension is fascinating: Apple, the company that built a $3T market cap on vertical integration and 'it just works,' is now outsourcing its AI brain to Google while simultaneously trying to launch a standalone Siri app to compete with ChatGPT. This is ecosystem fragility dressed as innovation—admitting they're behind while betting their moat (hardware + software control) can still win even with rented intelligence.</blockquote>
+  <blockquote class="quick-take">Tim Cook's final keynote before stepping down isn't just about iOS 27 features — it's about staking Apple's AI territory before they lose platform control. The 'All Systems Glow' tagline signals desperation dressed as confidence. Apple bet big on on-device AI last year and got leapfrogged by ChatGPT, Claude, and Gemini cloud services. Now they're reportedly partnering with Google Gemini for Siri while simultaneously building their own models. This is the innovator's dilemma playing out in real-time: protect the platform or admit you need help. They're trying to do both.</blockquote>
 
   <section class="section">
     <h3>What Happened</h3>
-    <p>Apple's WWDC 2026 keynote (June 8, 1PM ET) will debut iOS, macOS updates with delayed Siri overhaul finally launching. Siri now uses Google Gemini instead of Apple AI models, plus rumors of dedicated Siri app. This is Tim Cook's final keynote as CEO before September 1 handoff to John Ternus (current hardware engineering lead). Major updates expected across Apple's operating systems. The Siri delay since WWDC 2024 indicates Apple struggled to build competitive AI internally.</p>
+    <p>Apple's WWDC 2026 keynote happens June 8, with major OS updates across iOS 27, macOS 27, iPadOS 27, watchOS 27. Key rumor: Siri overhaul using Google Gemini integration, plus potentially a standalone Siri app. This comes after Siri revamp was announced at WWDC 2024 but faced delays. Tim Cook's last keynote before John Ternus (current hardware lead) takes over as CEO on September 1st. Conference follows Apple's traditional 'Class of 27' OS reveal pattern.</p>
   </section>
 
   <section class="section">
     <h3>Business Model Breakdown</h3>
-    <p>Apple's business model: premium hardware margins (iPhone/Mac/iPad) subsidized by services revenue (App Store 30% take rate, iCloud subscriptions, Apple Music). Siri's role: reduce friction in the ecosystem to increase hardware stickiness and services usage. By outsourcing Siri's AI to Google Gemini, Apple is trading margin (paying Google per API call) for time-to-market—betting that ecosystem lock-in is more valuable than AI model ownership. The risk: Google gains behavioral data from iOS users.</p>
+    <p>Apple's business model tension: they make money from hardware sales, but AI is inherently a services play requiring massive compute. Their margin structure (38% gross margins on hardware) depends on NOT running expensive cloud inference. This explains their on-device AI strategy — it protects margins. But on-device models are 1-2 generations behind cloud models in capability. So they're caught: integrate competitors' cloud AI (ceding control, admitting weakness) or persist with inferior on-device experience (losing to Android AI features). The Gemini partnership is a desperate middle ground: outsource capability while maintaining iOS as the interface layer.</p>
   </section>
 
   <section class="section">
     <h3>What Makes Them Succeed</h3>
-    <p>Apple's moat has always been vertical integration: controlling hardware, software, services, and retail. Even with rented AI (Google Gemini), they still control the distribution layer (1B+ iOS devices), the trust layer (privacy brand), and the payment layer (Apple Pay, App Store). The unfair advantage: they can ship 'good enough' AI to 1B users instantly via OS update—no competitor can match distribution speed. Their bet: ecosystem stickiness trumps AI model superiority.</p>
+    <p>Apple's moat isn't technology — it's ecosystem lock-in and brand premium. They've trained 1.5B+ iPhone users to expect seamless integration across devices. Even if Siri is worse than ChatGPT, switching costs are enormous. Their success depends on being 'good enough' across integrated experiences rather than 'best' at any single feature. The hardware-first business model means they can lose the AI race and still print money — as long as people keep upgrading iPhones. The danger: if AI assistants become primary interface (voice-first, not app-first), iOS becomes a commodity OS and Apple loses pricing power.</p>
   </section>
 
   <section class="section">
     <h3>First Principles</h3>
-    <p>In platform competition, distribution beats innovation. The best technology doesn't win; the technology embedded in the most valuable behavior loop wins. Apple doesn't need the best AI model—they need AI good enough to keep users in the ecosystem. The fundamental truth: people don't switch devices for better voice assistants; they switch when the entire ecosystem breaks. As long as Siri is 'good enough,' the switching cost (losing iMessage, iCloud, AirPods integration) exceeds the benefit of moving to Android.</p>
+    <p>Platform power compounds when you control the user relationship, even if you don't control the underlying technology. Apple's bet: users will choose ecosystem integration over best-in-class AI. They're probably right for consumers (people want things to 'just work'), but wrong for power users and enterprises (who will use best tools regardless of platform). The first principles question: Is AI an application layer (Apple wins by integration) or an infrastructure layer (Google/OpenAI win by model capability)? If it's infrastructure, Apple becomes a reseller with compressed margins.</p>
   </section>
 
   <section class="section highlight">
     <h3>Why It Matters to You</h3>
-    <p>EasyBuzz operates in a similar strategic position: you're a thin layer (video SaaS) on top of infrastructure you don't control (cloud compute, AI models, social platforms). Apple's Gemini partnership validates that you don't need to build the deepest tech stack—you need to own the workflow and distribution. Malaysian SMEs don't care if EasyBuzz uses OpenAI, Anthropic, or Google behind the scenes; they care that it works. Your moat isn't the AI model; it's understanding Malaysian SME content needs better than anyone else.</p>
+    <p>Apple's AI struggles reveal the SME opportunity. Big tech is fighting over consumer AI assistants — chatbots, personal productivity, general queries. But they're ignoring vertical AI for specific industries. EasyBuzz doesn't need to beat ChatGPT at everything; it needs to beat ChatGPT at 'create Malaysian SME video content that drives sales.' Vertical depth beats horizontal breadth for business users. While Apple optimizes Siri for consumer use cases, there's a window for EasyBuzz to own the 'AI video producer for SEA SMEs' category before anyone builds it properly. The lesson: when giants fight over platform control, specialists win by going deep on ignored use cases.</p>
   </section>
 
   <section class="section steal">
     <h3>What to Steal</h3>
-    <p>1) Rent the hard stuff, own the distribution: Don't compete on AI model training; compete on workflow design and customer access. Partner with best-in-class AI providers and focus your energy on SME-specific templates and Malaysian market understanding. 2) 'Good enough' + 'right now' beats 'perfect' + 'later': Ship with third-party AI now instead of waiting to build your own. Speed to market with SMEs compounds trust. 3) Ecosystem lock-in through integration: Make EasyBuzz export directly to TikTok, Instagram, Facebook—reduce friction in the distribution step so users come back to you because you're embedded in their workflow.</p>
+    <p>1) Apple's 'delayed but eventually ships' approach to new features teaches patience with AI integration. Don't rush half-baked AI features to match competitors. Ship AI capabilities when they reliably solve specific user problems, not as checkbox features. 2) The 'standalone app' rumor for Siri is significant — it admits the OS-level integration isn't enough. Consider: does EasyBuzz need to be embedded everywhere (Shopify, Facebook, etc.) or can a standalone 'video command center' be the better UX for power users? Probably both: embedded for quick tasks, standalone for strategy. 3) Platform transitions create opportunity. As Apple moves from app-centric to AI-centric iOS, the rules change. What worked in the app store era won't work in the AI era. For EasyBuzz: optimize for AI distribution (being the tool ChatGPT/Claude recommend for video creation) rather than just app store optimization.</p>
   </section>
 
   <a class="source-link" href="https://www.theverge.com/tech/944110/wwdc-2026-news-announcements" target="_blank" rel="noopener">Read original →</a>
