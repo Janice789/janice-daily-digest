@@ -27,6 +27,7 @@ Select the best 3-5 articles and return a JSON array. Each object must have exac
   "source": "source name",
   "url": "article URL",
   "readTime": "X min",
+  "quickTake": "3-4 sentences written as a behavioural architect. Lead with the human tension or paradox at the core of this story — why people/companies behave this way, what psychological or strategic force is at play. Make it vivid, opinionated, and impossible to ignore. This is the hook that makes someone want to read the full dive.",
   "whatHappened": "3-4 sentences of factual context",
   "businessModel": "How do they make money? Unit economics? Revenue model? (or economic logic if not a company story)",
   "whatMakesThemSucceed": "The unfair advantage, moat, or key insight they have",

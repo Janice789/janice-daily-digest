@@ -14,6 +14,8 @@ function renderStory(dive) {
     <div class="meta"><span class="source">${escapeHtml(dive.source)}</span> · <span class="read-time">${escapeHtml(dive.readTime)}</span></div>
   </header>
 
+  ${dive.quickTake ? `<blockquote class="quick-take">${escapeHtml(dive.quickTake)}</blockquote>` : ''}
+
   <section class="section">
     <h3>What Happened</h3>
     <p>${escapeHtml(dive.whatHappened)}</p>
@@ -61,6 +63,7 @@ const CSS = `
   .story-header h2 { font-size: 1.4rem; line-height: 1.3; margin-bottom: 6px; }
   .meta { font-size: 0.85rem; color: #888; margin-bottom: 24px; }
   .source { font-weight: bold; color: #555; }
+  blockquote.quick-take { font-size: 1.05rem; font-style: italic; line-height: 1.75; color: #1a1a1a; border-left: 4px solid #1a1a1a; margin: 0 0 32px; padding: 12px 20px; background: #f5f5f0; border-radius: 0 6px 6px 0; }
   .section { margin-bottom: 20px; }
   .section h3 { font-family: monospace; font-size: 0.75rem; letter-spacing: 1.5px; text-transform: uppercase; color: #999; margin-bottom: 6px; }
   .section p { font-size: 1rem; }
