@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Janice's Daily Digest — 2026-06-09</title>
+  <style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Georgia', serif; background: #fafaf8; color: #1a1a1a; line-height: 1.7; }
+  .container { max-width: 760px; margin: 0 auto; padding: 40px 24px 80px; }
+  header.page-header { border-bottom: 3px solid #1a1a1a; padding-bottom: 24px; margin-bottom: 48px; }
+  .digest-label { font-family: monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #666; }
+  h1 { font-size: 2rem; margin: 8px 0 4px; }
+  .date-line { color: #888; font-size: 0.9rem; }
+  article.story { margin-bottom: 64px; padding-bottom: 64px; border-bottom: 1px solid #e0e0d8; }
+  article.story:last-child { border-bottom: none; }
+  .story-header h2 { font-size: 1.4rem; line-height: 1.3; margin-bottom: 6px; }
+  .meta { font-size: 0.85rem; color: #888; margin-bottom: 24px; }
+  .source { font-weight: bold; color: #555; }
+  blockquote.quick-take { font-size: 1.05rem; font-style: italic; line-height: 1.75; color: #1a1a1a; border-left: 4px solid #1a1a1a; margin: 0 0 32px; padding: 12px 20px; background: #f5f5f0; border-radius: 0 6px 6px 0; }
+  .section { margin-bottom: 20px; }
+  .section h3 { font-family: monospace; font-size: 0.75rem; letter-spacing: 1.5px; text-transform: uppercase; color: #999; margin-bottom: 6px; }
+  .section p { font-size: 1rem; }
+  .section.highlight { background: #fffbf0; border-left: 3px solid #f5a623; padding: 16px; border-radius: 0 4px 4px 0; }
+  .section.steal { background: #f0f7ff; border-left: 3px solid #2979ff; padding: 16px; border-radius: 0 4px 4px 0; }
+  .source-link { display: inline-block; margin-top: 16px; font-size: 0.85rem; color: #2979ff; text-decoration: none; font-family: monospace; }
+  .source-link:hover { text-decoration: underline; }
+  footer { margin-top: 48px; font-size: 0.8rem; color: #aaa; text-align: center; }
+  /* Quick Scan */
+  .quick-scan { margin-bottom: 56px; }
+  .qs-header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid #1a1a1a; }
+  .qs-eyebrow { font-family: monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: bold; color: #1a1a1a; }
+  .qs-sub { font-size: 0.8rem; color: #999; }
+  .qs-theme { padding: 18px 0; border-bottom: 1px solid #e8e8e0; }
+  .qs-theme:last-child { border-bottom: none; }
+  .qs-theme-label { font-family: monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #2979ff; font-weight: bold; margin-bottom: 12px; }
+  .qs-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+  .qs-item { display: flex; gap: 12px; align-items: baseline; }
+  .qs-item::before { content: "→"; font-family: monospace; font-size: 0.8rem; color: #ccc; flex-shrink: 0; }
+  .qs-item-body { flex: 1; }
+  .qs-link { font-size: 0.92rem; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; }
+  .qs-link:hover { color: #2979ff; text-decoration: underline; }
+  .qs-meta { display: flex; gap: 8px; align-items: center; margin-top: 2px; }
+  .qs-source { font-family: monospace; font-size: 10px; color: #bbb; letter-spacing: 0.5px; }
+  .qs-snippet { font-size: 0.78rem; color: #999; line-height: 1.4; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <div class="digest-label">Fri · Tech &amp; AI · 3-MONTH CATCH-UP</div>
+      <h1>3-Month Catch-Up</h1>
+      <div class="date-line">Tuesday, 9 June 2026 · 5 deep dives</div>
+    </header>
+    
+<section class="quick-scan">
+  <div class="qs-header">
+    <span class="qs-eyebrow">Quick Scan</span>
+    <span class="qs-sub">Top 3 headlines across all themes — click to read</span>
+  </div>
+  <div class="qs-themes">
+      <div class="qs-theme">
+        <div class="qs-theme-label">Mental Models</div>
+        <ul class="qs-list">
+      <li class="qs-item">
+        <div class="qs-item-body">
+          <a href="https://fs.blog/knowledge-project-podcast/bill-gurley/" target="_blank" rel="noopener" class="qs-link">Mental Models That Change How You Think | Bill Gurley</a>
+          <div class="qs-meta">
+            <span class="qs-source">Farnam Street</span>
+            <span class="qs-snippet">— Bill Gurley spent years on Wall Street, built his career as a partner at Benchmark, worked through Uber’s hypergrowth er…</span>
+          </div>
+        </div>
+      </li>
+      <li class="qs-item">
+        <div class="qs-item-body">
+          <a href="https://fs.blog/knowledge-project-podcast/mark-pincus/" target="_blank" rel="noopener" class="qs-link">Proven, Better, New: Mark Pincus on the Rules of Innovation</a>
+          <div class="qs-meta">
+            <span class="qs-source">Farnam Street</span>
+            <span class="qs-snippet">— Mark Pincus is the creator behind Farmville and Words with Friends. He built Zynga into one of the biggest gaming compan…</span>
+          </div>
+        </div>
+      </li>
+      <li class="qs-item">
+        <div class="qs-item-body">
+          <a href="https://fs.blog/knowledge-project-podcast/outliers-chung-ju-yung/" target="_blank" rel="noopener" class="qs-link">[Outliers] Chung Ju-yung: The Hyundai Founder Who Put a Country on His Back </a>
+          <div class="qs-meta">
+            <span class="qs-source">Farnam Street</span>
+            <span class="qs-snippet">— Chung Ju-yung built Hyundai because he refused to be stopped. He is known for turning Hyundai into an industrial force t…</span>
+          </div>
+        </div>
+      </li></ul>
+      </div>
+      <div class="qs-theme">
+        <div class="qs-theme-label">Founder Lens</div>
+        <ul class="qs-list">
+      <li class="qs-item">
+        <div class="qs-item-body">
+          <a href="https://www.ycombinator.com/blog/welcome-harshita/" target="_blank" rel="noopener" class="qs-link">Harshita Arora Joins YC as General Partner</a>
+          <div class="qs-meta">
+            <span class="qs-source">YC Blog</span>
+            <span class="qs-snippet">— We're thrilled to announce that Harshita Arora is joining Y Combinator as a General Partner.  She brings deep fintech an…</span>
+          </div>
+        </div>
+      </li>
+      <li class="qs-item">
+        <div class="qs-item-body">
+          <a href="https://www.ycombinator.com/blog/adding-canada-back/" target="_blank" rel="noopener" class="qs-link">Adding Canada Back to Our List of Accepted Countries of Incorporation</a>
+          <div class="qs-meta">
+            <span class="qs-source">YC Blog</span>
+            <span class="qs-snippet">— After hearing feedback from Canadian founders in our network, we are adding Canada back to our list of accepted countrie…</span>
+          </div>
+        </div>
+      </li>
+      <li class="qs-item">
+        <div class="qs-item-body">
+          <a href="https://www.ycombinator.com/blog/congratulations-to-equipmentshare/" target="_blank" rel="noopener" class="qs-link">Congratulations to EquipmentShare on Going Public</a>
+          <div class="qs-meta">
+            <span class="qs-source">YC Blog</span>
+            <span class="qs-snippet">— Today, EquipmentShare (YC W15) goes public. From Missouri to 373 locations nationwide, they've built the operating syste…</span>
+          </div>
+        </div>
+      </li></ul>
+      </div>
+      <div class="qs-theme">
+        <div class="qs-theme-label">Primary Sources</div>
+        <ul class="qs-list">
+      <li class="qs-item">
+        <div class="qs-item-body">
+          <a href="https://www.ft.com/content/a347e00a-2952-41ad-9f12-88c01ba199d6" target="_blank" rel="noopener" class="qs-link">OpenAI files to go public in blockbuster Wall Street listing</a>
+          <div class="qs-meta">
+            <span class="qs-source">Financial Times</span>
+            <span class="qs-snippet">— ChatGPT creator has submitted paperwork for IPO expected to value company at more than $1tn…</span>
+          </div>
+        </div>
+      </li>
+      <li class="qs-item">
+        <div class="qs-item-body">
+          <a href="https://www.ft.com/content/2f0f727b-5315-445c-b8f1-6aa65bd7474c" target="_blank" rel="noopener" class="qs-link">Wall Street rebounds as traders race back into chip stocks</a>
+          <div class="qs-meta">
+            <span class="qs-source">Financial Times</span>
+            <span class="qs-snippet">— Intel and Micron among big gainers as fervour over AI-linked shares resumes…</span>
+          </div>
+        </div>
+      </li>
+      <li class="qs-item">
+        <div class="qs-item-body">
+          <a href="https://www.ft.com/content/6f4d806c-eb22-4c32-8352-b82692d30e9f" target="_blank" rel="noopener" class="qs-link">The AI spying breakthrough that spooked the Kremlin</a>
+          <div class="qs-meta">
+            <span class="qs-source">Financial Times</span>
+            <span class="qs-snippet">— Russia paused surveillance system after killing of Iran’s Supreme Leader exposed how AI can be used on CCTV data to targ…</span>
+          </div>
+        </div>
+      </li></ul>
+      </div>
+      <div class="qs-theme">
+        <div class="qs-theme-label">Builder Biographies</div>
+        <ul class="qs-list">
+      <li class="qs-item">
+        <div class="qs-item-body">
+          <a href="https://colossus.com/episode/order-out-of-chaos/" target="_blank" rel="noopener" class="qs-link">Dara Khosrowshahi - Uber's Bet on AVs, AI, and Building a Super-App - [Invest Like the Best, EP.476]</a>
+          <div class="qs-meta">
+            <span class="qs-source">Invest Like the Best</span>
+            <span class="qs-snippet">— My guest today is Dara Khosrowshahi, the CEO of Uber. Before Uber, Dara ran Expedia for thirteen years. We start with wh…</span>
+          </div>
+        </div>
+      </li>
+      <li class="qs-item">
+        <div class="qs-item-body">
+          <a href="https://colossus.com/episode/reminiscences-of-an-investor/" target="_blank" rel="noopener" class="qs-link">Dan Loeb - Lessons from 30 Years of Investing - [Invest Like the Best, EP.475]</a>
+          <div class="qs-meta">
+            <span class="qs-source">Invest Like the Best</span>
+            <span class="qs-snippet">— My guest today is Dan Loeb, the founder and CEO of Third Point. 
+
+Dan started Third Point in 1995 with a few million dol…</span>
+          </div>
+        </div>
+      </li>
+      <li class="qs-item">
+        <div class="qs-item-body">
+          <a href="https://colossus.com/episode/the-new-rules-of-war/" target="_blank" rel="noopener" class="qs-link">Darren Farber on Iran, China, and the Rise of Neoprimes - [Invest Like the Best, EP.474]</a>
+          <div class="qs-meta">
+            <span class="qs-source">Invest Like the Best</span>
+            <span class="qs-snippet">— My guest today is Darren Farber, and this is his second appearance on the show.
+
+Darren is a Managing Partner of Albion…</span>
+          </div>
+        </div>
+      </li></ul>
+      </div>
+      <div class="qs-theme">
+        <div class="qs-theme-label">Culture &amp; Design</div>
+        <ul class="qs-list">
+      <li class="qs-item">
+        <div class="qs-item-body">
+          <a href="https://www.wired.com/story/openai-confidentially-files-for-ipo/" target="_blank" rel="noopener" class="qs-link">OpenAI Confidentially Files for IPO on the Heels of SpaceX and Anthropic</a>
+          <div class="qs-meta">
+            <span class="qs-source">Wired Business</span>
+            <span class="qs-snippet">— The ChatGPT-maker announced it has filed paperwork to go public, just a week after rival Anthropic took the same step.…</span>
+          </div>
+        </div>
+      </li>
+      <li class="qs-item">
+        <div class="qs-item-body">
+          <a href="https://www.wired.com/story/kalshi-polymarket-influencer-election-denial-spencer-pratt/" target="_blank" rel="noopener" class="qs-link">Polymarket and Kalshi Say Influencer Partners Can’t Deny Election Results, Actually</a>
+          <div class="qs-meta">
+            <span class="qs-source">Wired Business</span>
+            <span class="qs-snippet">— Social media posts questioning the integrity of LA’s mayoral election were labeled “paid partnerships.” Then Kalshi and…</span>
+          </div>
+        </div>
+      </li>
+      <li class="qs-item">
+        <div class="qs-item-body">
+          <a href="https://www.wired.com/story/uk-supercomputer-investment-ai-homegrown-semiconductor/" target="_blank" rel="noopener" class="qs-link">The UK Is Betting on a Billion-Dollar AI Supercomputer to Kick Its Addiction to US Tech</a>
+          <div class="qs-meta">
+            <span class="qs-source">Wired Business</span>
+            <span class="qs-snippet">— The British government thinks a state-backed infrastructure initiative will help supercharge homegrown chip startups.…</span>
+          </div>
+        </div>
+      </li></ul>
+      </div>
+      <div class="qs-theme">
+        <div class="qs-theme-label">Tech &amp; AI</div>
+        <ul class="qs-list">
+      <li class="qs-item">
+        <div class="qs-item-body">
+          <a href="https://techcrunch.com/2026/06/08/mercors-brendan-foody-calls-out-sequoia-over-dual-pricing-valuation-tricks/" target="_blank" rel="noopener" class="qs-link">Mercor’s Brendan Foody calls out Sequoia over ‘dual-pricing’ valuation tricks</a>
+          <div class="qs-meta">
+            <span class="qs-source">TechCrunch</span>
+            <span class="qs-snippet">— Sequoia is just one of the top firms that sells same equity at two different prices.…</span>
+          </div>
+        </div>
+      </li>
+      <li class="qs-item">
+        <div class="qs-item-body">
+          <a href="https://techcrunch.com/2026/06/08/as-openai-files-for-ipo-sam-altmans-eye-scanning-company-is-doing-layoffs-report-says/" target="_blank" rel="noopener" class="qs-link">As OpenAI files for IPO, Sam Altman’s eye-scanning company is doing layoffs, report says</a>
+          <div class="qs-meta">
+            <span class="qs-source">TechCrunch</span>
+            <span class="qs-snippet">— Tools for Humanity, Sam Altman's identity verification company, is reportedly struggling to generate revenue and will do…</span>
+          </div>
+        </div>
+      </li>
+      <li class="qs-item">
+        <div class="qs-item-body">
+          <a href="https://techcrunch.com/2026/06/08/apples-wwdc-ai-demos-looked-more-real-after-250m-false-ad-settlement/" target="_blank" rel="noopener" class="qs-link">Apple’s WWDC AI demos looked more real after $250M false ad settlement</a>
+          <div class="qs-meta">
+            <span class="qs-source">TechCrunch</span>
+            <span class="qs-snippet">— The vibe of Apple's 2026 WWDC keynote felt like a spouse proudly listing all the honey-do-list items tackled. One subtle…</span>
+          </div>
+        </div>
+      </li></ul>
+      </div>
+      <div class="qs-theme">
+        <div class="qs-theme-label">Competitive Intel</div>
+        <ul class="qs-list">
+      <li class="qs-item">
+        <div class="qs-item-body">
+          <a href="https://stratechery.com/2026/google-buys-compute-from-spacex-broadcoms-outlook-apples-ai-politics/" target="_blank" rel="noopener" class="qs-link">Google Buys Compute From SpaceX, Broadcom’s Outlook, Apple’s AI Politics</a>
+          <div class="qs-meta">
+            <span class="qs-source">Stratechery</span>
+            <span class="qs-snippet">— Google's deal with SpaceX, and Broadcom's earnings, both seem bullish for Nvidia. Then, what I'm looking for at WWDC.…</span>
+          </div>
+        </div>
+      </li>
+      <li class="qs-item">
+        <div class="qs-item-body">
+          <a href="https://stratechery.com/2026/power-shifts/" target="_blank" rel="noopener" class="qs-link">2026.23: Power Shifts</a>
+          <div class="qs-meta">
+            <span class="qs-source">Stratechery</span>
+            <span class="qs-snippet">— The best Stratechery content from the week of June 1, 2026, including Google and Microsoft, YouTubers taking over Hollyw…</span>
+          </div>
+        </div>
+      </li>
+      <li class="qs-item">
+        <div class="qs-item-body">
+          <a href="https://stratechery.com/2026/an-interview-with-microsoft-ceo-satya-nadella-about-finding-core-competencies/" target="_blank" rel="noopener" class="qs-link">An Interview with Microsoft CEO Satya Nadella About Finding Core Competencies</a>
+          <div class="qs-meta">
+            <span class="qs-source">Stratechery</span>
+            <span class="qs-snippet">— An interview with Microsoft CEO Satya Nadella about figuring out Microsoft's role in AI, the relationship with OpenAI, C…</span>
+          </div>
+        </div>
+      </li></ul>
+      </div></div>
+</section>
+    
+<article class="story">
+  <header class="story-header">
+    <h2>OpenAI and Anthropic IPO Filings: The AI Infrastructure Endgame Becomes Clear</h2>
+    <div class="meta"><span class="source">TechCrunch</span> · <span class="read-time">4 min</span></div>
+  </header>
+
+  <blockquote class="quick-take">The two leading AI labs filing for IPO within a week of each other isn't coincidence—it's capitulation. After burning billions on compute with no path to profitability at current pricing, they're racing to capital markets before the marginal cost of intelligence approaches zero. The message: foundation models are infrastructure plays now, not product companies. Whoever controls distribution wins, not whoever trains the best base model.</blockquote>
+
+  <section class="section">
+    <h3>What Happened</h3>
+    <p>OpenAI filed confidentially for IPO in early June 2026, following Anthropic's filing a week earlier. This marks a dramatic shift from the 'AGI mission' narrative to traditional public company mechanics. Both companies face mounting pressure: compute costs remain astronomical, enterprise customers are price-sensitive, and open-source models are commoditizing capabilities. The IPO path suggests investors want liquidity before the economics fully deteriorate.</p>
+  </section>
+
+  <section class="section">
+    <h3>Business Model Breakdown</h3>
+    <p>Foundation model companies are pivoting from 'research lab' to 'cloud infrastructure provider' economics—high fixed costs, marginal revenue from API calls, reliance on massive scale. The IPO timing reveals they can't justify private valuations through organic revenue growth alone. They need public markets to finance the compute arms race while open-source erodes pricing power from below.</p>
+  </section>
+
+  <section class="section">
+    <h3>What Makes Them Succeed</h3>
+    <p>First-mover brand advantage and enterprise relationship lock-in before commoditization completes. OpenAI has ChatGPT consumer mindshare; Anthropic has safety-conscious enterprise positioning. But their real moat is time—going public now locks in valuations before the market fully prices in that intelligence itself will become a near-zero marginal cost utility.</p>
+  </section>
+
+  <section class="section">
+    <h3>First Principles</h3>
+    <p>When infrastructure becomes commoditized, value accrues to applications and distribution, not to the infrastructure layer itself. The IPO filings signal that even the best-funded AI labs recognize they're becoming commodity compute providers. The winning move shifts from 'best model' to 'best distribution + best vertical application.'</p>
+  </section>
+
+  <section class="section highlight">
+    <h3>Why It Matters to You</h3>
+    <p>EasyBuzz's timing is perfect. As foundation models commoditize and prices collapse, the cost structure for AI-powered features drops dramatically. Instead of competing on AI capability (impossible at your scale), win on Malaysian SME distribution, local language nuance, and payment integration. The giants are optimizing for Wall Street quarterly reports now—you can optimize for actual customer problems. Your $29-249 pricing works because you're not financing a compute arms race.</p>
+  </section>
+
+  <section class="section steal">
+    <h3>What to Steal</h3>
+    <p>1) Build on the cheapest adequate AI, not the best—your customers can't tell the difference between GPT-5 and a fine-tuned open model for video caption generation. 2) Architect for rapid model swapping: as prices collapse, your COGS improves automatically without product changes. 3) Focus all energy on distribution advantages giants can't replicate: Bahasa Malaysia quality, local payment methods, WhatsApp-first onboarding. The model is now the commodity; your go-to-market is the moat.</p>
+  </section>
+
+  <a class="source-link" href="https://techcrunch.com/2026/06/08/following-anthropic-openai-files-confidentially-for-ipo/" target="_blank" rel="noopener">Read original →</a>
+</article>
+
+<article class="story">
+  <header class="story-header">
+    <h2>Apple Waives Cloud AI Costs for Small Developers: The Distribution War Goes Vertical</h2>
+    <div class="meta"><span class="source">TechCrunch</span> · <span class="read-time">3 min</span></div>
+  </header>
+
+  <blockquote class="quick-take">Apple's move to waive cloud AI API costs for developers under 2M downloads isn't generosity—it's strategic panic dressed as benevolence. With OpenAI and Microsoft capturing developer mindshare through ChatGPT and Copilot integrations, Apple risks becoming the dumb pipe. By subsidizing small developers' compute costs, Apple is buying ecosystem loyalty before iOS becomes irrelevant to the AI application layer. The subtext: platforms without AI-native developers are dead platforms walking.</blockquote>
+
+  <section class="section">
+    <h3>What Happened</h3>
+    <p>At WWDC 2026, Apple announced it will waive cloud inference costs for developers with fewer than 2 million first-time App Store downloads. This directly addresses the explosion in AI experimentation costs that's been pricing out indie developers. While large studios can absorb inference costs, small teams building AI-native features face sudden margin compression. Apple is essentially paying their compute bill to keep them building on iOS instead of web-first or Windows platforms.</p>
+  </section>
+
+  <section class="section">
+    <h3>Business Model Breakdown</h3>
+    <p>Platform subsidy economics: Apple loses money on compute but gains ecosystem lock-in and App Store transaction volume. They're betting that free AI inference creates enough high-quality apps to maintain iOS premium positioning. It's also defensive—if developers go web-first due to AI costs, Apple loses the 15-30% App Store tax entirely. Better to subsidize compute than lose the transaction layer.</p>
+  </section>
+
+  <section class="section">
+    <h3>What Makes Them Succeed</h3>
+    <p>Controlling the end-user device and having $200B+ in cash to subsidize developer costs. Apple can afford to run inference at a loss because they monetize through hardware margins and services revenue. They're also betting on vertical integration—their own silicon makes inference cheaper than AWS/Azure, so the subsidy costs them less than it would cost competitors to match.</p>
+  </section>
+
+  <section class="section">
+    <h3>First Principles</h3>
+    <p>When compute costs threaten to fragment an ecosystem, the platform owner with the deepest balance sheet will subsidize to maintain control. Distribution platforms extract value from transaction volume, not compute efficiency. If AI costs push developers off your platform, you lose both the apps and the revenue share—making compute subsidy rational even at a loss.</p>
+  </section>
+
+  <section class="section highlight">
+    <h3>Why It Matters to You</h3>
+    <p>This is a blueprint for your SME pricing strategy. Large enterprises can absorb AI feature costs, but Malaysian SMEs with RM50k-200k annual revenue cannot. If you subsidize or bundle AI capabilities into your base pricing, you capture customers that competitors will price out. You're essentially doing what Apple does: lose money (or margin) on compute to win the recurring revenue stream. At $29-249/month, you can absorb 10-30 cents of AI cost per user and still have healthy unit economics—if it means 10x higher conversion than competitors charging usage-based AI fees.</p>
+  </section>
+
+  <section class="section steal">
+    <h3>What to Steal</h3>
+    <p>1) Bundle AI features at flat pricing, don't charge per-use—SMEs hate unpredictable costs and will choose simpler tools over better tools with variable pricing. 2) Market the 'no surprise bills' positioning explicitly: 'Unlimited AI video captions included.' Make your subsidy the feature. 3) Run the numbers: if you can absorb RM5-10 of monthly AI cost per customer, that becomes a competitive moat against usage-based competitors. As model costs drop, your margin improves automatically while pricing stays flat.</p>
+  </section>
+
+  <a class="source-link" href="https://techcrunch.com/2026/06/08/apple-bets-cheaper-ai-will-woo-small-developers/" target="_blank" rel="noopener">Read original →</a>
+</article>
+
+<article class="story">
+  <header class="story-header">
+    <h2>Meta AI Customer Support Hack: The Social Engineering Attack Surface Expands</h2>
+    <div class="meta"><span class="source">MIT Tech Review</span> · <span class="read-time">3 min</span></div>
+  </header>
+
+  <blockquote class="quick-take">Attackers hijacked Instagram accounts by simply asking Meta's AI customer support agent to transfer email ownership—and the AI complied. This isn't a technical vulnerability; it's an architectural one. Every AI agent with write-access to production systems is now a social engineering vector. As companies race to deploy AI customer support to cut costs, they're creating thousands of new attack surfaces that respond to natural language manipulation, not just code exploits. The security model built for deterministic software doesn't work for probabilistic agents.</blockquote>
+
+  <section class="section">
+    <h3>What Happened</h3>
+    <p>In early June 2026, attackers used Meta's AI customer support chatbot to steal Instagram accounts, including the dormant Obama White House account. They simply asked the agent to change account email addresses to attacker-controlled addresses, and the AI agent executed the requests without proper verification. This revealed a fundamental flaw: AI agents trained to be helpful and reduce friction can be manipulated through conversational attacks that bypass traditional security checks. The incident forced an industry reckoning about deploying AI with production system access.</p>
+  </section>
+
+  <section class="section">
+    <h3>Business Model Breakdown</h3>
+    <p>AI customer support economics break when security costs are factored in. The promise is 80% cost reduction by replacing human agents, but each incident like this requires expensive human remediation, legal liability, and trust damage. Companies deployed AI support to improve margins, but underpriced the tail risk of AI agents making consequential errors. The real cost isn't the AI inference—it's the 1% of cases where it fails catastrophically.</p>
+  </section>
+
+  <section class="section">
+    <h3>What Makes Them Succeed</h3>
+    <p>The attack succeeded because Meta optimized for user friction reduction over security verification. The AI was trained to resolve customer complaints quickly, and 'quickly' meant fewer verification steps. The attackers exploited the gap between what the AI was trained to do (be helpful) and what it should have been architecturally prevented from doing (changing account ownership without strong authentication).</p>
+  </section>
+
+  <section class="section">
+    <h3>First Principles</h3>
+    <p>AI agents are persuadable in ways software isn't. Traditional security assumes adversaries attack code; AI security requires assuming adversaries will manipulate intent through natural language. Any AI with write-access to production data needs hard-coded guardrails, not just training-based behavioral limits. Helpfulness and security are fundamentally opposed objectives in customer-facing AI.</p>
+  </section>
+
+  <section class="section highlight">
+    <h3>Why It Matters to You</h3>
+    <p>If you're building AI features into EasyBuzz—automated video editing, caption generation, content suggestions—you must architect for prompt injection and social engineering from day one. Malaysian SMEs will share accounts across teams, use weak passwords, and trust AI responses implicitly. If your AI can delete videos, modify exports, or change billing details based on natural language requests, you're building the same vulnerability Meta did. The liability of an SME losing their entire video library because your AI was 'helpful' will kill your business faster than any competitor.</p>
+  </section>
+
+  <section class="section steal">
+    <h3>What to Steal</h3>
+    <p>1) Implement hard permission boundaries: AI can suggest but never execute destructive actions (delete, transfer ownership, change payment details) without explicit user confirmation outside the AI interface. 2) Add friction intentionally for high-stakes actions—require password re-entry or 2FA even if it hurts NPS scores. Security &gt; convenience for SME business data. 3) Build an audit log of every AI-initiated action with rollback capability. When (not if) your AI does something unintended, your ability to instantly reverse it is your insurance policy. Make 'undo' a first-class feature.</p>
+  </section>
+
+  <a class="source-link" href="https://www.technologyreview.com/2026/06/05/1138437/the-meta-hack-shows-theres-more-to-ai-security-than-mythos" target="_blank" rel="noopener">Read original →</a>
+</article>
+
+<article class="story">
+  <header class="story-header">
+    <h2>Apple Lets Users Generate Safari Extensions with Natural Language: The No-Code Endgame</h2>
+    <div class="meta"><span class="source">The Verge</span> · <span class="read-time">3 min</span></div>
+  </header>
+
+  <blockquote class="quick-take">Apple demoed users creating Safari extensions by describing them in natural language—'save recipes from websites and let me add notes'—and Apple Intelligence generates the working code. This isn't a feature; it's the end of software development as a distinct profession. When users can vibe-code their own tools, the value collapses from 'can you build it' to 'do you understand the user problem well enough to describe the right solution.' The bottleneck shifts from implementation to product taste and distribution.</blockquote>
+
+  <section class="section">
+    <h3>What Happened</h3>
+    <p>At WWDC 2026, Apple showed Safari users can now generate custom extensions by describing desired functionality in plain language. Apple Intelligence writes the code, tests it, and installs it—no programming knowledge required. This extends the no-code movement to its logical conclusion: users become their own developers for one-off tools. While limited to Safari initially, the paradigm demonstrates that code generation quality has crossed the threshold where end-users can create functional software without understanding syntax or architecture.</p>
+  </section>
+
+  <section class="section">
+    <h3>Business Model Breakdown</h3>
+    <p>This nukes the economics of simple utility software. If users can generate their own tools in 30 seconds, why pay $3.99 for a recipe saver extension? The value shifts entirely to complex integrations, design excellence, and maintained ecosystems that users can't self-generate. Software becomes valuable only when it requires sustained coordination, proprietary data, or taste that can't be prompt-engineered. One-time problem solvers become worthless.</p>
+  </section>
+
+  <section class="section">
+    <h3>What Makes Them Succeed</h3>
+    <p>Apple wins by owning the generation interface and the distribution platform. They don't need to build every extension—they enable users to build what they need, keeping them in the Apple ecosystem. It's platform leverage: Apple provides the AI and the runtime, capturing value through hardware sales and services subscriptions rather than per-app transactions. They're making software generation a platform feature, not a product.</p>
+  </section>
+
+  <section class="section">
+    <h3>First Principles</h3>
+    <p>When creation costs approach zero, value accrues only to maintained, coordinated, or taste-driven products. Simple utility software dies first. Anything a user can adequately describe in one prompt becomes free. Sustainable software businesses require ongoing value delivery—security updates, performance optimization, integration maintenance, design evolution—that can't be generated on-demand.</p>
+  </section>
+
+  <section class="section highlight">
+    <h3>Why It Matters to You</h3>
+    <p>EasyBuzz cannot be a one-time problem solver. 'Generate a video caption' is exactly the kind of task users will soon prompt-engineer themselves using Apple's tools or similar. Your moat isn't the AI capability—it's the sustained value delivery: understanding Malaysian SME content calendars, maintaining integrations with local platforms (Shopee, Lazada, TikTok), curating templates that work for specific verticals (F&amp;B, fashion, services), and providing ongoing optimization. If your product can be described in a single prompt, you have no business.</p>
+  </section>
+
+  <section class="section steal">
+    <h3>What to Steal</h3>
+    <p>1) Build for ongoing coordination, not one-time generation. Your value is the full workflow: content strategy → video creation → scheduling → analytics → iteration. A user can't prompt-engineer a sustained content practice. 2) Invest in proprietary data moats: 'Videos optimized for Malaysian TikTok algorithm' or 'Templates based on 10,000 successful SME campaigns in SEA' can't be generated on-demand. 3) Make taste and curation the product: instead of exposing raw AI tools, curate the 5 templates that actually work for a Penang cafe vs. a KL fashion boutique. The curation is the value, not the generation capability.</p>
+  </section>
+
+  <a class="source-link" href="https://www.theverge.com/tech/946345/apple-safari-ai-update-extensions" target="_blank" rel="noopener">Read original →</a>
+</article>
+
+<article class="story">
+  <header class="story-header">
+    <h2>Sequoia's Dual-Pricing Valuation Controversy: The Honest Truth About Startup Valuations</h2>
+    <div class="meta"><span class="source">TechCrunch</span> · <span class="read-time">4 min</span></div>
+  </header>
+
+  <blockquote class="quick-take">Mercor's founder publicly accused Sequoia of using 'dual-pricing' tricks to inflate startup valuations for headlines while giving insiders better terms. It's not a scandal—it's how venture has always worked. But a portfolio founder saying the quiet part loud reveals the underlying tension: as AI hype peaks and public markets cool, the gap between 'announced valuation' and 'actual price per share for smart money' has become untenable. This matters because every founder pricing their own round uses comps from press releases that don't reflect real deal terms.</blockquote>
+
+  <section class="section">
+    <h3>What Happened</h3>
+    <p>Brendan Foody, founder of AI recruiting company Mercor, publicly criticized Sequoia Capital for allegedly using dual-class pricing structures that allow different investors to pay different effective valuations in the same round. While one class gets announced at a high headline valuation (used for press and recruiting), another class receives better terms (lower effective price via liquidation preferences, ratchets, or warrants). This lets VCs claim portfolio companies are worth $XB for marketing while actually investing at much lower risk-adjusted prices. The controversy exploded because it makes pricing subsequent rounds nearly impossible—founders don't know what their 'real' valuation is.</p>
+  </section>
+
+  <section class="section">
+    <h3>Business Model Breakdown</h3>
+    <p>Dual-pricing lets VCs have it both ways: high headline valuations attract talent and downstream investors, while actual investor economics reflect sober risk assessment. It's rational for VCs (minimize risk, maximize recruitment value) but toxic for founders who use those headline numbers as pricing comps. As AI valuations compress, this gap between marketed and real valuations becomes the mechanism for repricing the bubble without admitting it in press releases.</p>
+  </section>
+
+  <section class="section">
+    <h3>What Makes Them Succeed</h3>
+    <p>Sequoia succeeds because they have brand power to attract deals at any terms, and LPs who trust their judgment regardless of optics. Founders accept complex terms because Sequoia validation signals quality to customers, employees, and later investors. The dual-pricing works because most founders don't understand liquidation preferences, participate structures, or effective price-per-share math—they optimize for headline valuation, not actual dilution and downside scenarios.</p>
+  </section>
+
+  <section class="section">
+    <h3>First Principles</h3>
+    <p>Valuation is a marketing number; terms are the economic reality. In efficient markets, price reflects risk. When headline valuations diverge dramatically from actual investor risk/return, it signals information asymmetry—sophisticated investors know something founders don't (usually: the probability of a downside scenario that makes their protective terms extremely valuable).</p>
+  </section>
+
+  <section class="section highlight">
+    <h3>Why It Matters to You</h3>
+    <p>You're in the seed/Series A zone where this matters intensely. If you're comparing your metrics to AI companies announcing $50M Series A at $200M valuation, you're comparing to fantasy numbers. Those companies likely have 3x liquidation preferences, ratchets, and warrant coverage that mean investors' actual cost basis is closer to $80M valuation. Don't underprice yourself, but don't overprice based on fake comps. More importantly: understand every term in your term sheet. Malaysian founders face even worse information asymmetry—SEA investors may use these structures more freely because founders have less access to Silicon Valley legal/financial knowledge.</p>
+  </section>
+
+  <section class="section steal">
+    <h3>What to Steal</h3>
+    <p>1) Price your round on fundamentals (revenue multiples for comparable SaaS, CAC payback, gross margin), not on headline AI valuations from TechCrunch. If you're doing $30k MRR with 70% gross margin and reasonable churn, you're worth 5-10x ARR (~$1.8-3.6M valuation) regardless of what some AI company claims. 2) Hire a lawyer who actually understands liquidation preferences and participatory terms—this isn't optional. Paying $5k for proper legal review of a term sheet saves you from $500k mistakes. 3) Build your business to avoid raising entirely: at $29-249/month with low churn, you can get to $50k MRR and profitability on $200k of capital or less. The best defense against predatory terms is not needing the money.</p>
+  </section>
+
+  <a class="source-link" href="https://techcrunch.com/2026/06/08/mercors-brendan-foody-calls-out-sequoia-over-dual-pricing-valuation-tricks/" target="_blank" rel="noopener">Read original →</a>
+</article>
+    <footer>Janice Daily Digest · Auto-generated · <a href="index.html">All digests →</a></footer>
+  </div>
+</body>
+</html>
